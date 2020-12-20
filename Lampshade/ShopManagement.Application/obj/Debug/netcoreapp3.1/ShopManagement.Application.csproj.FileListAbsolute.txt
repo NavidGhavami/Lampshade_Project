@@ -1,0 +1,16 @@
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.csprojAssemblyReference.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.AssemblyInfoInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.AssemblyInfo.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.csproj.CoreCompileInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.deps.json
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\0_Framework.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\0_Framework.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.csproj.CopyComplete
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.pdb
