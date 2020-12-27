@@ -69,6 +69,15 @@ enctype="multipart/form-data">
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
+                    <label asp-for="UrlLink" class="control-label">لینک</label>
+                    <input type="text" class="form-control" asp-for="UrlLink">
+                    <span asp-validation-for="UrlLink" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
                     <label asp-for="BtnText" class="control-label">متن دکمه</label>
                     <input type="text" class="form-control" asp-for="BtnText">
                     <span asp-validation-for="BtnText" class="error"></span>

@@ -1,0 +1,44 @@
+﻿@model List<_01_LampshadeQuery.Contracts.Slider.SliderQueryModel>
+
+@{
+}
+
+<div class="home-slider style1 rows-space-30">
+            <div class="container">
+                <div class="slider-owl owl-slick equal-container nav-center"
+                     data-slick='{"autoplay":true, "autoplaySpeed":9000, "arrows":true, "dots":false, "infinite":true, "speed":1000, "rows":1}'
+                     data-responsive='[{"breakpoint":"2000","settings":{"slidesToShow":1}}]'>
+
+                    @foreach (var item in Model)
+                    {
+                        
+                        
+                        <div class="slider-item ">
+                            
+                            <div class="slider-inner equal-element">
+                                <div class="slider-infor">
+                                    <h5 class="title-small">
+                                        @item.Title
+                                    </h5>
+                                    <h3 class="title-big">
+                                        @item.Text<br/>
+
+                                    </h3>
+                                    <div class="price">
+                                        @item.Heading
+                                        <span class="number-price">
+
+                                        </span>
+                                    </div>
+                                    <a href="@item.UrlLink" class="button btn-shop-the-look bgroud-style">@item.BtnText</a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <img src="@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle"/>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>

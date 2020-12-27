@@ -21,7 +21,7 @@ namespace ShopManagement.Application
             var operation = new OperationResult();
 
             var slider =new Slider(command.Picture,command.PictureAlt,command.PictureTitle,command.Heading,
-                command.Title,command.Text,command.BtnText);
+                command.Title,command.Text,command.BtnText,command.UrlLink);
 
             _sliderRepository.Create(slider);
             _sliderRepository.SaveChanges();
@@ -40,7 +40,7 @@ namespace ShopManagement.Application
             }
 
             slider.Edit(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading,
-                command.Title, command.Text, command.BtnText);
+                command.Title, command.Text, command.BtnText,command.UrlLink);
 
             _sliderRepository.SaveChanges();
 

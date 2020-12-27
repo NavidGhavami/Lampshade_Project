@@ -1,0 +1,33 @@
+﻿@font-face {
+    font-family: 'IranianSans';
+    src: url('../fonts/IranianSans.eot'), 
+         url('../fonts/IranianSans.eot') format('embedded-opentype'), 
+         url('../fonts/IranianSans.woff2') format('woff2'), 
+         url('../fonts/IranianSans.woff') format('woff'), 
+         url('../fonts/IranianSans.ttf') format('truetype'), 
+         url('../fonts/IranianSans.svg') format('svg');
+}
+
+    
+    body {
+    font-family: 'IranianSans';
+}
+
+.SliderImage img {
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+
+}
+.slider-item .slider-inner .slider-infor  {
+    position: fixed;
+    padding-bottom: 126px;
+    padding-top: 80px;
+    padding-left: 680px;
+    padding-right: 170px;
+    float: left;
+    direction: rtl
+
+}
