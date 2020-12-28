@@ -12,7 +12,7 @@ namespace ShopManagement.Domain.ProductCategory
         public string PictureAlt { get; private set; }
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
-        public string Slug { get; set; }
+        public string Slug { get; private set; }
         public List<Product.Product> Products { get; private set; }
 
         public ProductCategory()

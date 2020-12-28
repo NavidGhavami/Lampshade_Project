@@ -28,6 +28,47 @@
     padding-left: 680px;
     padding-right: 170px;
     float: left;
-    direction: rtl
+    direction: rtl;
 
+}
+
+.item-banner-Category .banner-content {
+    padding-top: 49px;
+    padding-right: 160px;
+    padding-bottom: 53px;
+    padding-left: 23px;
+    direction: rtl;
+    position: absolute;
+    bottom: 10px;
+}
+.item-banner-Category .inner img {
+    position: relative;
+}
+
+.item-banner-category .title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 5px;
+}
+
+.item-banner-Category .description {
+    margin-bottom: 20px;
+    max-width: 190px;
+}
+.item-banner-Category a {
+    background: lightgray;
+    color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: inherit;
+    
+}
+.item-banner-Category a:hover {
+    background: darkgray;
+    color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: inherit;
 }

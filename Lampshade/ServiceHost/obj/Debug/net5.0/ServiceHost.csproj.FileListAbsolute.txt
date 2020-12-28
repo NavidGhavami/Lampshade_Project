@@ -174,3 +174,4 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Slider\Default.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\01_LampshadeQuery.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\01_LampshadeQuery.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductCategory\Default.cshtml.g.cs

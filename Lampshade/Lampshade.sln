@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Configuratio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{12940FE3-BD02-4DA1-A1FE-869E7D6F63CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_LampshadeQuery", "01_LampshadeQuery\01_LampshadeQuery.csproj", "{64AE2B97-0FB9-4F36-8358-5B0023C380F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_LampshadeQuery", "01_LampshadeQuery\01_LampshadeQuery.csproj", "{64AE2B97-0FB9-4F36-8358-5B0023C380F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

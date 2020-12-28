@@ -1,0 +1,33 @@
+﻿@model List<_01_LampshadeQuery.Contracts.ProductCategory.ProductCategoryQueryModel>
+@{
+}
+
+<div class="banner-wrapp rows-space-35">
+    <div class="container">
+        <div class="row">
+           
+            @foreach (var item in Model) 
+            {
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="banner">
+                        <div class="item-banner-Category ">
+                            <div class="inner">
+                                <img src="@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle"/>
+                                <div class="banner-content">
+                                    <h3 class="title">@item.Name</h3>
+                                    <div class="description">
+                                        @item.Description
+                                    </div>
+                                    <a asp-page="/ProductCategory" asp-route-id="@item.Slug" class="btn btn-rounded">خرید</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</div>
