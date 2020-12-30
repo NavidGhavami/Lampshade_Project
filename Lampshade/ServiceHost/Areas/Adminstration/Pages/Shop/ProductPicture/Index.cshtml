@@ -90,13 +90,13 @@
                                             @if (!item.IsRemoved)
                                             {
                                                 <a class="btn btn-danger btn-rounded waves-effect waves-light m-b-5" asp-page="./Index" asp-page-handler="Remove" asp-route-id="@item.Id">
-                                                حذف
+                                                عدم نمایش
                                                 </a>
                                             }
                                             else
                                             {
                                                 <a class="btn btn-success btn-rounded waves-effect waves-light m-b-5" asp-page="./Index" asp-page-handler="Restore" asp-route-id="@item.Id">
-                                                    فعالسازی
+                                                    نمایش
                                                 </a>
                                             }
                                             

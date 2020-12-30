@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Application.Contract.Product;
@@ -32,7 +33,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     Category = x.Category.Name,
                     CategoryId = x.CategoryId,
                     Picture = x.Picture,
-                    CreationDate = x.CreationDate.ToString(),
+                    CreationDate = x.CreationDate.ToFarsi(),
                     IsInStock = x.IsInStock
                     
                 });

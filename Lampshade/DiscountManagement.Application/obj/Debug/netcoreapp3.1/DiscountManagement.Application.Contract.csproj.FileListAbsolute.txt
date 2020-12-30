@@ -1,0 +1,14 @@
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.deps.json
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\bin\Debug\netcoreapp3.1\0_Framework.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\bin\Debug\netcoreapp3.1\0_Framework.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.csprojAssemblyReference.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.AssemblyInfoInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.AssemblyInfo.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.csproj.CoreCompileInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.csproj.CopyComplete
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\obj\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contract.pdb

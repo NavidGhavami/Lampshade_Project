@@ -7,7 +7,7 @@ namespace ServiceHost.Areas.Adminstration.Pages.Shop.Sliders
 {
     public class IndexModel : PageModel
     {
-        [TempData] 
+        [TempData]
         public string Message { get; set; }
 
         public List<SliderViewModel> slider;
@@ -30,51 +30,51 @@ namespace ServiceHost.Areas.Adminstration.Pages.Shop.Sliders
         public IActionResult OnGetCreate()
         {
             var command = new CreateSlider();
-             return Partial("./Create", command);
+            return Partial("./Create", command);
 
         }
 
-    public JsonResult OnPostCreate(CreateSlider command)
-    {
-        var result = _sliderApplication.Create(command);
-        return new JsonResult(result);
-    }
-
-    public IActionResult OnGetEdit(long id)
-    {
-        var slide = _sliderApplication.GetDetails(id);
-        return Partial("Edit", slide);
-    }
-
-    public JsonResult OnPostEdit(EditSlider command)
-    {
-        var result = _sliderApplication.Edit(command);
-        return new JsonResult(result);
-    }
-
-    public IActionResult OnGetRemove(long id)
-    {
-        var  result = _sliderApplication.Remove(id);
-
-        if (result.IsSuccedded) 
+        public JsonResult OnPostCreate(CreateSlider command)
         {
-            return RedirectToPage("./Index");
+            var result = _sliderApplication.Create(command);
+            return new JsonResult(result);
         }
 
-        Message = result.Message;
-       return RedirectToPage("./Index");
-
-    }
-    public IActionResult OnGetRestore(long id)
-    {
-        var result = _sliderApplication.Restore(id);
-        if (result.IsSuccedded)
+        public IActionResult OnGetEdit(long id)
         {
-            return RedirectToPage("./Index");
+            var slide = _sliderApplication.GetDetails(id);
+            return Partial("Edit", slide);
         }
 
-        Message = result.Message;
-        return RedirectToPage("./Index");
+        public JsonResult OnPostEdit(EditSlider command)
+        {
+            var result = _sliderApplication.Edit(command);
+            return new JsonResult(result);
+        }
+
+        public IActionResult OnGetRemove(long id)
+        {
+            var result = _sliderApplication.Remove(id);
+
+            if (result.IsSuccedded)
+            {
+                return RedirectToPage("./Index");
+            }
+
+            Message = result.Message;
+            return RedirectToPage("./Index");
+
+        }
+        public IActionResult OnGetRestore(long id)
+        {
+            var result = _sliderApplication.Restore(id);
+            if (result.IsSuccedded)
+            {
+                return RedirectToPage("./Index");
+            }
+
+            Message = result.Message;
+            return RedirectToPage("./Index");
         }
 
     }
