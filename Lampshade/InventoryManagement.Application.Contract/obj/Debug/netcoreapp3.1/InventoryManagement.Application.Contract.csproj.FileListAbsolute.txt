@@ -1,0 +1,12 @@
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.deps.json
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\bin\Debug\netcoreapp3.1\0_Framework.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\bin\Debug\netcoreapp3.1\0_Framework.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.csprojAssemblyReference.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.AssemblyInfoInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.AssemblyInfo.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.csproj.CoreCompileInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.csproj.CopyComplete
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application.Contract\obj\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.pdb

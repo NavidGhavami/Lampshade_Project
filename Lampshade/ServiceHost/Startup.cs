@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Configuration;
 using DiscountManagement.Configuration;
+using InventoryManagement.Configuration;
 
 namespace ServiceHost
 {
@@ -21,8 +22,10 @@ namespace ServiceHost
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("LampshadeDb");
+
             ShopMangementBootstrapper.Configure(services, connectionString);
             DiscountManagementBootStrapper.Configure(services, connectionString);
+            InventoryManagementBootstrapper.Configure(services, connectionString);
 
 
 
