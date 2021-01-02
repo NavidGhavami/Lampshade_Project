@@ -5,7 +5,7 @@ using ShopManagement.Domain.Product;
 
 namespace ShopManagement.Application
 {
-    public class ProductApplication:IProductApplication
+    public class ProductApplication : IProductApplication
     {
         private readonly IProductRepository _productRepository;
 
@@ -18,13 +18,13 @@ namespace ShopManagement.Application
         {
             var slug = command.Slug.Slugify();
             var operation = new OperationResult();
-            if (_productRepository.Exist(x=>x.Name==command.Name))
+            if (_productRepository.Exist(x => x.Name == command.Name))
             {
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
             }
-            var product = new Product(command.Name,command.Code,command.UnitPrice,command.ShortDescription,
-                command.Description,command.Picture,command.PictureAlt,command.PictureTitle,
-                slug, command.Keywords,command.MetaDescription,command.CategoryId);
+            var product = new Product(command.Name, command.Code, command.ShortDescription,
+                command.Description, command.Picture, command.PictureAlt, command.PictureTitle,
+                slug, command.Keywords, command.MetaDescription, command.CategoryId);
             _productRepository.Create(product);
             _productRepository.SaveChanges();
 
@@ -36,16 +36,16 @@ namespace ShopManagement.Application
             var slug = command.Slug.Slugify();
             var operation = new OperationResult();
             var product = _productRepository.Get(command.Id);
-            if (product==null)
+            if (product == null)
             {
                 return operation.Failed(ApplicationMessages.RecordNotFound);
             }
 
-            if (_productRepository.Exist(x=>x.Name == command.Name && x.Id!=command.Id))
+            if (_productRepository.Exist(x => x.Name == command.Name && x.Id != command.Id))
             {
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
             }
-            product.Edit(command.Name, command.Code, command.UnitPrice, command.ShortDescription,
+            product.Edit(command.Name, command.Code, command.ShortDescription,
                 command.Description, command.Picture, command.PictureAlt, command.PictureTitle,
                 slug, command.Keywords, command.MetaDescription, command.CategoryId);
             _productRepository.SaveChanges();
@@ -68,36 +68,6 @@ namespace ShopManagement.Application
             return _productRepository.GetProducts();
         }
 
-        public OperationResult InStock(long id)
-        {
-            
-            var operation = new OperationResult();
-            var product = _productRepository.Get(id);
-            if (product == null)
-            {
-                return operation.Failed(ApplicationMessages.RecordNotFound);
-            }
 
-            product.InStock();
-            _productRepository.SaveChanges();
-
-            return operation.Succedded();
-        }
-
-        public OperationResult NotInStock(long id)
-        {
-
-            var operation = new OperationResult();
-            var product = _productRepository.Get(id);
-            if (product == null)
-            {
-                return operation.Failed(ApplicationMessages.RecordNotFound);
-            }
-
-            product.NotInStock();
-            _productRepository.SaveChanges();
-
-            return operation.Succedded();
-        }
     }
 }

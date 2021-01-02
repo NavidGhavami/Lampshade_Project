@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using InventoryManagement.Application.Contract.Inventory;
 using InventoryManagement.Domain.InventoryAgg;
@@ -42,7 +43,8 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 ProductId = x.ProductId,
                 UnitPrice = x.UnitPrice,
                 InStock = x.InStock,
-                CurrentCount = x.CalculateCurrentCount()
+                CurrentCount = x.CalculateCurrentCount(),
+                CreationDate = x.CreationDate.ToFarsi()
 
             });
 
@@ -51,7 +53,7 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 query = query.Where(x => x.ProductId == searchModel.ProductId);
             }
 
-            if (!searchModel.InStock)
+            if (searchModel.InStock)
             {
                 query = query.Where(x => !x.InStock);
             }
@@ -62,6 +64,24 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 item.Product = products.FirstOrDefault(x => x.Id == item.ProductId)?.Name);
 
             return inventory;
+        }
+
+        public List<InventoryOperationViewModel> GetOperationLog(long inventoryId)
+        {
+            var inventory = _context.Inventories.FirstOrDefault(x => x.Id == inventoryId);
+            return inventory.Operations.Select(x => new InventoryOperationViewModel
+            {
+                Id = x.Id,
+                Count = x.Count,
+                CurrentCount = x.CurrentCount,
+                Description = x.Description,
+                OrderId = x.OrderId,
+                Operation = x.Operation,
+                OperationDate = x.OperationDate.ToFarsi(),
+                OperatorId = x.OperatorId,
+                Operator = "مدیر سیستم"
+
+            }).OrderByDescending(x=>x.Id).ToList();
         }
     }
 }

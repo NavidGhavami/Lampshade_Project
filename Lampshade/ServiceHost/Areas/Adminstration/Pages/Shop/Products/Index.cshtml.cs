@@ -10,8 +10,7 @@ namespace ServiceHost.Areas.Adminstration.Pages.Shop.Products
 {
     public class IndexModel : PageModel
     {
-        [TempData] 
-        public string Message { get; set; }
+        [TempData] public string Message { get; set; }
 
         public ProductSearchModel SearchModel;
         public List<ProductViewModel> Product;
@@ -19,7 +18,8 @@ namespace ServiceHost.Areas.Adminstration.Pages.Shop.Products
         public SelectList ProductCategory;
         private readonly IProductCategoryApplication _productCategoryApplication;
 
-        public IndexModel(IProductApplication productApplication, IProductCategoryApplication productCategoryApplication)
+        public IndexModel(IProductApplication productApplication,
+            IProductCategoryApplication productCategoryApplication)
         {
             _productApplication = productApplication;
             _productCategoryApplication = productCategoryApplication;
@@ -38,52 +38,27 @@ namespace ServiceHost.Areas.Adminstration.Pages.Shop.Products
             {
                 Category = _productCategoryApplication.GetProductCategory()
             };
-            
+
             return Partial("./Create", command);
-    }
+        }
 
-    public JsonResult OnPostCreate(CreateProduct command)
-    {
-        var result = _productApplication.Create(command);
-        return new JsonResult(result);
-    }
-
-    public IActionResult OnGetEdit(long id)
-    {
-        var product = _productApplication.GetDetails(id);
-        product.Category = _productCategoryApplication.GetProductCategory();
-        return Partial("Edit", product);
-    }
-
-    public JsonResult OnPostEdit(EditProduct command)
-    {
-        var result = _productApplication.Edit(command);
-        return new JsonResult(result);
-    }
-
-    public IActionResult OnGetNotInStock(long id)
-    {
-        var  result = _productApplication.NotInStock(id);
-        if (result.IsSuccedded) 
+        public JsonResult OnPostCreate(CreateProduct command)
         {
-            return RedirectToPage("./Index");
+            var result = _productApplication.Create(command);
+            return new JsonResult(result);
         }
 
-        Message = result.Message;
-       return RedirectToPage("./Index");
-
-    }
-    public IActionResult OnGetIsInStock(long id)
-    {
-        var result = _productApplication.InStock(id);
-        if (result.IsSuccedded)
+        public IActionResult OnGetEdit(long id)
         {
-            return RedirectToPage("./Index");
+            var product = _productApplication.GetDetails(id);
+            product.Category = _productCategoryApplication.GetProductCategory();
+            return Partial("Edit", product);
         }
 
-        Message = result.Message;
-        return RedirectToPage("./Index");
+        public JsonResult OnPostEdit(EditProduct command)
+        {
+            var result = _productApplication.Edit(command);
+            return new JsonResult(result);
         }
-
     }
 }

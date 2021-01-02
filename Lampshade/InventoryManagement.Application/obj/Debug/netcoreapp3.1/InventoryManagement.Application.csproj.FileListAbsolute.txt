@@ -14,3 +14,5 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Applic
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.csproj.CopyComplete
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application\obj\Debug\netcoreapp3.1\InventoryManagement.Application.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Application\bin\Debug\netcoreapp3.1\ShopManagement.Application.Contract.pdb
