@@ -82,4 +82,23 @@
 .block-account {
     direction: rtl;
 }
+.productPrice {
+    font-size: 14px;
+}
+.onDiscount {
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: inline-block;
+    float: left;
+    line-height: 22px;
+    height: 22px;
+    min-width: 44px;
+    padding: 0 15px;
+    text-align: center;
+    background-color: red;
+    color: #fff;
+    position: relative;
+}
 

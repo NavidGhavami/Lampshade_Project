@@ -16,3 +16,15 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\obj\Debu
 F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\obj\Debug\netcoreapp3.1\01_LampshadeQuery.csproj.CopyComplete
 F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\obj\Debug\netcoreapp3.1\01_LampshadeQuery.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\obj\Debug\netcoreapp3.1\01_LampshadeQuery.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\InventoryManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.EfCore.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.EfCore.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\InventoryManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\DiscountManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\01_LampshadeQuery\bin\Debug\netcoreapp3.1\DiscountManagement.Domain.pdb

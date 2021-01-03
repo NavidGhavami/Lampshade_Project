@@ -1,0 +1,109 @@
+﻿@model List<_01_LampshadeQuery.Contracts.ProductCategory.ProductCategoryQueryModel>
+
+
+<div class="cleric-tabs  default rows-space-40">
+    <div class="container">
+        <div class="tab-head">
+            <ul class="tab-link">
+                @foreach (var category in Model)
+                {
+                <li class="@(Model.First() == category ? "active" : "")">
+                    <a data-toggle="tab" aria-expanded="true" href="#@category.Id">@category.Name</a>
+                </li>
+                }
+            </ul>
+        </div>
+        <div class="tab-container">
+            @foreach (var category in Model)
+            {
+            <div id="@category.Id" class="tab-panel @(Model.First() == category ? "active" : "")">
+                @foreach (var product in category.Products)
+                    {
+
+                <div class="cleric-product">
+                    <ul class="list-products auto-clear equal-container product-grid">
+                        <li class="product-item product-type-variable col-xl-4 col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12">
+                            <div class="product-inner equal-element">
+                                <div class="product-top">
+                                    @if (product.HasDiscount)
+                                    {
+                                        <div class="onDiscount">
+                                            <span class="">
+                                                <span class="text">
+                                                    @product.DiscountRate % تخفیف
+                                                </span>
+                                            </span>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="product-thumb">
+                                    <div class="thumb-inner">
+                                        <a href="#">
+                                            <img src="@product.Picture" title="@product.PictureTitle" alt="@product.PictureAlt">
+                                        </a>
+                                        <div class="thumb-group">
+                                            <div class="yith-wcwl-add-to-wishlist">
+                                                <div class="yith-wcwl-add-button">
+                                                    <a href="#">افزودن به علاقه مندی ها</a>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="button quick-wiew-button">نگاه اجمالی</a>
+                                            <div class="loop-form-add-to-cart">
+                                                <button class="single_add_to_cart_button button">
+                                                    افزودن به سبد خرید
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h5 class="product-name product_title">
+                                        <a href="#">@product.Name</a>
+                                    </h5>
+                                    <div class="group-info">
+                                        <div class="stars-rating">
+                                            <div class="productPrice">
+                                                گروه محصول : @product.Category
+                                            </div>
+                                            <br/>
+                                            <div class="star-rating">
+                                                <span class="star-3"></span>
+                                            </div>
+                                            <div class="count-star">
+                                                (3)
+                                            </div>
+                                        </div>
+                                        <hr/>
+                                       @if (product.HasDiscount)
+                                       {
+                                           <div class="price">
+                                               <del>
+                                                 @product.Price
+                                               </del>
+                                               __
+
+                                               <ins>
+                                                   @product.PriceWithDiscount تومان
+                                               </ins>
+                                           </div>
+                                       }
+                                       else
+                                       {
+                                           <div class="price">
+                                               <ins>
+                                                   @product.Price تومان
+                                               </ins>
+                                           </div>
+                                       }
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                }
+            </div>
+            }
+        </div>
+    </div>
+</div>
