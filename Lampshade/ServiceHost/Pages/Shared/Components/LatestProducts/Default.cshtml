@@ -1,0 +1,79 @@
+﻿@model List<_01_LampshadeQuery.Contracts.Product.ProductQueryModel>
+
+
+<div class="product-in-stock-wrapp">
+<div class="container">
+<h3 class="custommenu-title-blog white">
+    آخرین محصولات
+</h3>
+<div class="cleric-product style3">
+<ul class="row list-products auto-clear equal-container product-grid">
+@foreach (var item in Model)
+{
+    <li class="product-item  col-lg-4 col-md-6 col-sm-6 col-xs-6 col-ts-12 style-3">
+    <div class="product-inner equal-element">
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="0">
+                    <img src="@item.Picture" title="@item.PictureTitle" alt="@item.PictureAlt">
+                </a>
+            </div>
+            <a href="#" class="button quick-wiew-button" tabindex="@item.Id">نگاه اجمالی</a>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="0">@item.Name</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                
+                @if (item.HasDiscount)
+                {
+                    <div class="latestProductPrice">
+                        <del>
+                            @item.Price
+                        </del>
+                        __
+
+                        <ins>
+                            @item.PriceWithDiscount تومان
+                        </ins>
+                    </div>
+                }
+                else
+                {
+                    <div class="latestProductPrice">
+                        <ins>
+                            @item.Price تومان
+                        </ins>
+                    </div>
+                }
+            </div>
+            
+            <div class="group-buttons">
+                @*                <div class="quantity">
+                    <div class="control">
+                        <a class="btn-number qtyminus quantity-minus" href="#">-</a>
+                        <input type="text" data-step="1" data-min="0" value="1" title="Qty"
+                               class="input-qty qty" size="4">
+                        <a href="#" class="btn-number qtyplus quantity-plus">+</a>
+                    </div>
+                </div>*@
+               
+                <button class="add_to_cart_button button" tabindex="0">خرید کنید</button>
+            </div>
+        </div>
+    </div>
+</li>
+}
+</ul>
+</div>
+</div>
+</div>
