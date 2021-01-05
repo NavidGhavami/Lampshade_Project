@@ -4157,8 +4157,9 @@ blockquote .author .desc {
     }
 /*---------BREADCRUMB-----------*/
 .breadcrumb {
-    direction: ltr;
-    margin-top: 15px;
+    padding: 34px 0 30px;
+    background: #ffffff;
+    margin: 0;
 }
 
     .breadcrumb > li {
@@ -5044,6 +5045,7 @@ ul.list-products {
 }
 
 .shop-grid-content.full-width .shop-top-control .select-item {
+    width: 23.2%;
 }
 /*product item style2*/
 .product-item.style2 .product-inner {

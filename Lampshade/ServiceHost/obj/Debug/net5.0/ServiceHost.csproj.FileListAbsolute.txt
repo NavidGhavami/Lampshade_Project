@@ -209,5 +209,3 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Inventory\Increase.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Inventory\OperationLog.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductCategoryWithProduct\Default.cshtml.g.cs
-F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\LatestProducts\Default.cshtml.g.cs
-F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\ProductCategory.cshtml.g.cs
