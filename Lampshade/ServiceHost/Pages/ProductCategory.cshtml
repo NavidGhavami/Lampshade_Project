@@ -1,0 +1,117 @@
+﻿@page
+@model ServiceHost.Pages.ProductCategoryModel
+@{
+    ViewData["Title"] = " گروه محصولات";
+}
+
+<div class="main-content main-content-product no-sidebar">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row RightDirection">
+            <div class="content-area shop-grid-content full-width col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="site-main">
+                    <h3 class="custom_blog_title MarginTop">
+                        @Model.ProductCategory.Description
+                    </h3>
+                    <div class="shop-top-control row-col-1">
+                        <form class="select-item select-form">
+                            <span class="title">نمایش تعداد محصول :</span>
+                            <select title="sort" data-placeholder="9 Products/Page" class="chosen-select">
+                                <option value="2">9 Products/Page</option>
+                                <option value="1">12 Products/Page</option>
+                                <option value="3">10 Products/Page</option>
+                                <option value="4">8 Products/Page</option>
+                                <option value="5">6 Products/Page</option>
+                            </select>
+                        </form>
+                        <ul class="trail-items breadcrumb">
+                            <li class="trail-item trail-begin">
+                                <a asp-page="./Index">خانه</a>
+                            </li>
+                            <li class="trail-item trail-end active">
+                                @Model.ProductCategory.Name
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="row list-products auto-clear equal-container product-grid">
+                        @foreach (var item in Model.ProductCategory.Products)
+                        {
+                        <li class="product-item  col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1">
+                            <div class="product-inner equal-element">
+                                <div class="product-top">
+                                   @if (item.HasDiscount)
+                                   {
+                                       <div class="onDiscount">
+                                           <span class="">
+                                               <span class="text">
+                                                   @item.DiscountRate % تخفیف
+                                               </span>
+                                           </span>
+                                       </div>
+                                   }
+                                </div>
+                                <div class="product-thumb">
+                                    <div class="thumb-inner">
+                                        <a href="#">
+                                            <img src="@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h5 class="product-name product_title">
+                                        <a href="#">@item.Name</a>
+                                    </h5>
+                                    <div class="group-info">
+                                        <div class="stars-rating CategoryList">
+                                            <div class="star-rating">
+                                                <span class="star-3"></span>
+                                            </div>
+                                            <div class="count-star">
+                                                (3)
+                                            </div>
+                                        </div>
+                                        @if (item.HasDiscount)
+                                        {
+                                            <div class="price CategoryList">
+                                                <del>
+                                                    @item.Price
+                                                </del>
+                                                __
+
+                                                <ins>
+                                                    @item.PriceWithDiscount تومان
+                                                </ins>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="price CategoryList">
+                                                <ins>
+                                                    @item.Price تومان
+                                                </ins>
+                                            </div>
+                                        }
+                                        <div class="CategoryListButton">
+                                            <a href="" class="">خرید کنید</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        }
+                    </ul>
+                    <div class="pagination clearfix style2">
+                        <div class="nav-link">
+                            <a href="#" class="page-numbers current"><i class="icon fa fa-angle-left" aria-hidden="true"></i></a>
+                            <a href="#" class="page-numbers">1</a>
+                            <a href="#" class="page-numbers">2</a>
+                            <a href="#" class="page-numbers">3</a>
+                            <a href="#" class="page-numbers"><i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

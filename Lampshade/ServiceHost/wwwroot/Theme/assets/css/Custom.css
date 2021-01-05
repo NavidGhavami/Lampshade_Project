@@ -101,4 +101,60 @@
     color: #fff;
     position: relative;
 }
+.product-item .latestProductPrice {
+    display: block;
+    font-size: 15px;
+    color: #7f87ab;
+    font-weight: 500;
+    line-height: 100%;
+    padding-bottom: 20px;
+}
+
+.product-item .latestProductPrice del {
+    color: #aaa;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.product-item .latestProductPrice ins {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.RightDirection {
+    direction: rtl;
+}
+
+.product-info .CategoryList {
+    padding-bottom: 20px;
+}
+
+.CategoryListButton a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 15px;
+    min-width: 103px;
+    background-color: #7f87ab;
+    font-size: 13px;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+.CategoryListButton a:hover {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 15px;
+    min-width: 103px;
+    background-color: black;
+    font-size: 13px;
+    border-radius: 30px;
+    color: #ffffff
+}
+
+.MarginTop {
+    margin-top: 50px;
+}
+.MarginBottom {
+    margin-bottom: 10px;
+}
 
