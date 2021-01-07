@@ -59,21 +59,10 @@
                 </div>
                 <div class="col-lg-7 col-sm-8 col-md-6 col-xs-5 col-ts-12">
                     <div class="block-search-block">
-                        <form class="form-search form-search-width-category">
+                        <form method="get" asp-page="/Search" class="form-search form-search-width-category">
                             <div class="form-content">
-                                <div class="category">
-                                    <select title="category" data-placeholder="All Categories" class="chosen-select"
-                                            tabindex="1">
-                                        <option value="0">گروه محصولات</option>
-                                        <option value="United Kingdom">Accents</option>
-                                        <option value="Afghanistan">Desks</option>
-                                        <option value="Aland Islands">Sofas</option>
-                                        <option value="Albania">New Arrivals</option>
-                                        <option value="Algeria">Bedroom</option>
-                                    </select>
-                                </div>
                                 <div class="inner">
-                                    <input type="text" class="input" name="s" value="" placeholder="هرچه می خواهید در فروشگاه جستجو کنید">
+                                    <input type="text" class="input" id="value" name="value" placeholder="هرچه می خواهید در فروشگاه جستجو کنید">
                                 </div>
                                 <button class="btn-search" type="submit">
                                     <span class="icon-search"></span>

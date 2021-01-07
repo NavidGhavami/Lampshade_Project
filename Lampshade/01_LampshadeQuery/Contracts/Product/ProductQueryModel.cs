@@ -13,6 +13,11 @@
         public int DiscountRate { get; set; }
         public string Category { get; set; }
         public bool HasDiscount { get; set; }
+        public string Description { get; set; }
+        public string ShortDescription { get; set; }
+        public string MetaDescription { get; set; }
+        public string Keywords { get; set; }
+
 
 
     }

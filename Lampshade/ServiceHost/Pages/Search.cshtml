@@ -1,7 +1,8 @@
-﻿@page "{id}"
-@model ServiceHost.Pages.ProductCategoryModel
+﻿@page
+@model ServiceHost.Pages.SearchModel
 @{
-    ViewData["Title"] = " گروه محصولات";
+    ViewData["Title"] = "نتیجه جستجو";
+
 }
 
 <div class="main-content main-content-product no-sidebar">
@@ -12,9 +13,9 @@
             <div class="content-area shop-grid-content full-width col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="site-main">
                     <h3 class="custom_blog_title MarginTop">
-                        @Model.ProductCategory.Description
+                        نتیجه جستجو برای : @Model.Value
                     </h3>
-                    <div class="shop-top-control row-col-1">
+@*                    <div class="shop-top-control row-col-1">
                         <form class="select-item select-form">
                             <span class="title">نمایش تعداد محصول :</span>
                             <select title="sort" data-placeholder="9 Products/Page" class="chosen-select">
@@ -25,17 +26,9 @@
                                 <option value="5">6 Products/Page</option>
                             </select>
                         </form>
-                        <ul class="trail-items breadcrumb">
-                            <li class="trail-item trail-begin">
-                                <a asp-page="./Index">خانه</a>
-                            </li>
-                            <li class="trail-item trail-end active">
-                                @Model.ProductCategory.Name
-                            </li>
-                        </ul>
-                    </div>
+                    </div>*@
                     <ul class="row list-products auto-clear equal-container product-grid">
-                        @foreach (var item in Model.ProductCategory.Products)
+                        @foreach (var item in Model.Product)
                         {
                         <li class="product-item  col-lg-3 col-md-4 col-sm-6 col-xs-6 col-ts-12 style-1">
                             <div class="product-inner equal-element">
