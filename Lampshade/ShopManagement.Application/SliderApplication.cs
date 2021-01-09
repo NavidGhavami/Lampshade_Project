@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using _0_Framework.Application;
+using Microsoft.AspNetCore.Http;
 using ShopManagement.Application.Contract.Slider;
 using ShopManagement.Domain.Slider;
 
@@ -10,17 +11,20 @@ namespace ShopManagement.Application
     public class SliderApplication:ISliderApplication
     {
         private readonly ISliderRepository _sliderRepository;
+        private readonly IFileUploader _fileUploader;
 
-        public SliderApplication(ISliderRepository sliderRepository)
+        public SliderApplication(ISliderRepository sliderRepository , IFileUploader fileUploader)
         {
             _sliderRepository = sliderRepository;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateSlider command)
         {
             var operation = new OperationResult();
+            var fileName = _fileUploader.Upload(command.Picture, "Slider");
 
-            var slider =new Slider(command.Picture,command.PictureAlt,command.PictureTitle,command.Heading,
+            var slider =new Slider(fileName,command.PictureAlt,command.PictureTitle,command.Heading,
                 command.Title,command.Text,command.BtnText,command.UrlLink);
 
             _sliderRepository.Create(slider);
@@ -39,7 +43,9 @@ namespace ShopManagement.Application
                 return operation.Failed(ApplicationMessages.RecordNotFound);
             }
 
-            slider.Edit(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading,
+            var fileName = _fileUploader.Upload(command.Picture, "Slider");
+
+            slider.Edit(fileName, command.PictureAlt, command.PictureTitle, command.Heading,
                 command.Title, command.Text, command.BtnText,command.UrlLink);
 
             _sliderRepository.SaveChanges();

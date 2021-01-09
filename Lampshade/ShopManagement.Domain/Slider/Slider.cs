@@ -30,7 +30,10 @@ namespace ShopManagement.Domain.Slider
         public void Edit(string picture, string pictureAlt, string pictureTitle,
             string heading, string title, string text, string btnText, string urlLink)
         {
-            Picture = picture;
+            if (!string.IsNullOrWhiteSpace(picture))
+            {
+                Picture = picture;
+            }
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             Heading = heading;

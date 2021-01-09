@@ -10,6 +10,7 @@ namespace ShopManagement.Domain.ProductCategory
     {
         List<ProductCategoryViewModel> GetProductCategory();
         EditProductCategory GetDetails(long id);
+        string GetSlugById(long id);
         List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel);
         
     }

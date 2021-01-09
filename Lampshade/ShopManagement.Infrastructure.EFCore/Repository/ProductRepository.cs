@@ -52,6 +52,8 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
             return query.OrderByDescending(x => x.Id).ToList();
         }
 
+        
+
         public EditProduct GetDetails(long id)
         {
             return _context.Products
@@ -66,7 +68,7 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                     ShortDescription = x.ShortDescription,
                     Keywords = x.Keywords,
                     MetaDescription = x.MetaDescription,
-                    Picture = x.Picture,
+                   // Picture = x.Picture,
                     PictureAlt = x.PictureAlt,
                     PictureTitle = x.PictureTitle
                     
@@ -86,6 +88,11 @@ namespace ShopManagement.Infrastructure.EFCore.Repository
                 Name = x.Name
 
             }).ToList();
+        }
+
+        public Product GetProductWithCategory(long id)
+        {
+            return _context.Products.Include(x => x.Category).FirstOrDefault(x => x.Id == id);
         }
     }
 }
