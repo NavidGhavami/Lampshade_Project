@@ -4154,6 +4154,7 @@ blockquote .author .desc {
         -vendor-animation-iteration-count: infinite;
         height: auto;
         overflow: inherit;
+        font-size: large;
     }
 /*---------BREADCRUMB-----------*/
 .breadcrumb {
@@ -6726,7 +6727,7 @@ ul.list-products {
 }
 
 .reviews-tab .stars-rating {
-    float: right;
+    float: left;
     display: inline-block;
 }
 
@@ -6803,9 +6804,8 @@ ul.list-products {
 
 .comment-form-review input[type="text"], .comment-form-review input[type="email"], .comment-form input[type="url"] {
     clear: both;
-    float: left;
     padding: 6px 15px;
-    width: 48%;
+    width: 100%;
 }
 
 .comment-form-review .form-submit .submit {

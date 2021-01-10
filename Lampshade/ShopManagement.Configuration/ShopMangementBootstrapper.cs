@@ -5,10 +5,12 @@ using _01_LampshadeQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application;
+using ShopManagement.Application.Contract.Comment;
 using ShopManagement.Application.Contract.Product;
 using ShopManagement.Application.Contract.ProductCategory;
 using ShopManagement.Application.Contract.ProductPicture;
 using ShopManagement.Application.Contract.Slider;
+using ShopManagement.Domain.Comment;
 using ShopManagement.Domain.Product;
 using ShopManagement.Domain.ProductCategory;
 using ShopManagement.Domain.ProductPicture;
@@ -39,6 +41,10 @@ namespace ShopManagement.Configuration
             services.AddTransient<IProductCategoryQuery, ProductCategoryQuery>();
 
             services.AddTransient<IProductQueryModel, ProductQuery>();
+
+            services.AddTransient<ICommentApplication, CommentApplication>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
+
 
             services.AddDbContext<ShopContext>(x => x.UseSqlServer(connectionString));
         }

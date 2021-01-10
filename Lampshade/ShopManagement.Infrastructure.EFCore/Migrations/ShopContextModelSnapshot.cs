@@ -19,6 +19,44 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
+            modelBuilder.Entity("ShopManagement.Domain.Comment.Comment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("IsCanceled")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.Product.Product", b =>
                 {
                     b.Property<long>("Id")
@@ -227,6 +265,17 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("Slider");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.Comment.Comment", b =>
+                {
+                    b.HasOne("ShopManagement.Domain.Product.Product", "Product")
+                        .WithMany("Comments")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.Product.Product", b =>
                 {
                     b.HasOne("ShopManagement.Domain.ProductCategory.ProductCategory", "Category")
@@ -251,6 +300,8 @@ namespace ShopManagement.Infrastructure.EFCore.Migrations
 
             modelBuilder.Entity("ShopManagement.Domain.Product.Product", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("ProductPictures");
                 });
 
