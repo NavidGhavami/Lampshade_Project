@@ -218,3 +218,4 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\System.IO.Pipelines.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs

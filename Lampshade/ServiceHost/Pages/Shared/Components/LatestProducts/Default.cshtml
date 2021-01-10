@@ -14,7 +14,7 @@
     <div class="product-inner equal-element">
         <div class="product-thumb">
             <div class="thumb-inner">
-                <a href="#" tabindex="0">
+                <a asp-page="/Product" asp-route-id="@item.Slug" tabindex="0">
                     <img src="~/ProductPicture/@item.Picture" title="@item.PictureTitle" alt="@item.PictureAlt">
                 </a>
             </div>
@@ -22,7 +22,7 @@
         </div>
         <div class="product-info">
             <h5 class="product-name product_title">
-                <a href="#" tabindex="0">@item.Name</a>
+                <a asp-page="/Product" asp-route-id="@item.Slug" tabindex="0">@item.Name</a>
             </h5>
             <div class="group-info">
                 <div class="stars-rating">

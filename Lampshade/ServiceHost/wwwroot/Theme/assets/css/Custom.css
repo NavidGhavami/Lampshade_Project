@@ -1,27 +1,21 @@
 ﻿@font-face {
     font-family: 'IranianSans';
-    src: url('../fonts/IranianSans.eot'), 
-         url('../fonts/IranianSans.eot') format('embedded-opentype'), 
-         url('../fonts/IranianSans.woff2') format('woff2'), 
-         url('../fonts/IranianSans.woff') format('woff'), 
-         url('../fonts/IranianSans.ttf') format('truetype'), 
-         url('../fonts/IranianSans.svg') format('svg');
+    src: url('../fonts/IranianSans.eot'), url('../fonts/IranianSans.eot') format('embedded-opentype'), url('../fonts/IranianSans.woff2') format('woff2'), url('../fonts/IranianSans.woff') format('woff'), url('../fonts/IranianSans.ttf') format('truetype'), url('../fonts/IranianSans.svg') format('svg');
 }
 
-    
-    body {
+
+body {
     font-family: 'IranianSans';
 }
 
 .SliderImage img {
-
     top: 0;
     left: 0;
     height: 100%;
     width: 100%
-
 }
-.slider-item .slider-inner .slider-infor  {
+
+.slider-item .slider-inner .slider-infor {
     position: fixed;
     padding-bottom: 126px;
     padding-top: 80px;
@@ -29,7 +23,6 @@
     padding-right: 170px;
     float: left;
     direction: rtl;
-
 }
 
 .item-banner-Category .banner-content {
@@ -41,6 +34,7 @@
     position: absolute;
     bottom: 10px;
 }
+
 .item-banner-Category .inner img {
     position: relative;
 }
@@ -55,6 +49,7 @@
     margin-bottom: 20px;
     max-width: 190px;
 }
+
 .item-banner-Category a {
     background: lightgray;
     color: #000;
@@ -62,29 +57,33 @@
     overflow: hidden;
     font-size: 16px;
     font-family: inherit;
-    
 }
-.item-banner-Category a:hover {
-    background: darkgray;
-    color: #000;
-    border-radius: 15px;
-    overflow: hidden;
-    font-size: 16px;
-    font-family: inherit;
-}
+
+    .item-banner-Category a:hover {
+        background: darkgray;
+        color: #000;
+        border-radius: 15px;
+        overflow: hidden;
+        font-size: 16px;
+        font-family: inherit;
+    }
 
 .header-nav-container {
     direction: rtl;
 }
-.header-nav-container .container {
-    padding-right: 85px;
-}
+
+    .header-nav-container .container {
+        padding-right: 85px;
+    }
+
 .block-account {
     direction: rtl;
 }
+
 .productPrice {
     font-size: 14px;
 }
+
 .onDiscount {
     font-size: 14px;
     border-radius: 20px;
@@ -101,6 +100,7 @@
     color: #fff;
     position: relative;
 }
+
 .product-item .latestProductPrice {
     display: block;
     font-size: 15px;
@@ -110,16 +110,16 @@
     padding-bottom: 15px;
 }
 
-.product-item .latestProductPrice del {
-    color: #aaa;
-    margin-right: 5px;
-    font-size: 13px;
-}
+    .product-item .latestProductPrice del {
+        color: #aaa;
+        margin-right: 5px;
+        font-size: 13px;
+    }
 
-.product-item .latestProductPrice ins {
-    font-size: 15px;
-    text-decoration: none;
-}
+    .product-item .latestProductPrice ins {
+        font-size: 15px;
+        text-decoration: none;
+    }
 
 .RightDirection {
     direction: rtl;
@@ -140,21 +140,43 @@
     color: #ffffff;
 }
 
-.CategoryListButton a:hover {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 5px 15px;
-    min-width: 103px;
-    background-color: black;
-    font-size: 13px;
-    border-radius: 30px;
-    color: #ffffff
-}
+    .CategoryListButton a:hover {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 5px 15px;
+        min-width: 103px;
+        background-color: black;
+        font-size: 13px;
+        border-radius: 30px;
+        color: #ffffff
+    }
 
 .MarginTop {
     margin-top: 50px;
 }
+
 .MarginBottom {
     margin-bottom: 10px;
 }
 
+.ProductDetailPrice {
+    font-size: 30px;
+    text-decoration: none;
+    color: #7f87ab;
+}
+
+    .ProductDetailPrice del {
+        font-size: 30px;
+        text-decoration-line: line-through;
+        color: red;
+    }
+
+    .ProductDetailPrice ins {
+        font-size: 30px;
+        text-decoration: none;
+        color: #7f87ab;
+    }
+.image-preview-container img {
+    width: 100%;
+    height: 100%
+}

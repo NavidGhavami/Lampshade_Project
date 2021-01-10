@@ -1,0 +1,776 @@
+﻿@page "{id}"
+@using Microsoft.EntityFrameworkCore
+@model ServiceHost.Pages.ProductModel
+@{
+    ViewData["Title"] = "جزییات محصول";
+}
+
+<div class="main-content main-content-details single no-sidebar">
+<div class="container">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="breadcrumb-trail breadcrumbs">
+            <ul class="trail-items breadcrumb">
+                <li class="trail-item trail-begin">
+                    <a asp-page="./Index">صفحه اصلی</a>
+                </li>
+                <li class="trail-item">
+                    <a asp-page="/ProductCategory" asp-route-id="@Model.Product.CategorySlug">@Model.Product.Category</a>
+                </li>
+                <li class="trail-item trail-end active">
+                    @Model.Product.Name
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="row">
+<div class="content-area content-details full-width col-lg-9 col-md-8 col-sm-12 col-xs-12">
+<div class="site-main">
+<div class="details-product">
+    <div class="details-thumd">
+        <div class="image-preview-container image-thick-box image_preview_container">
+            <img  id="img_zoom" data-zoom-image="~/ProductPicture/@Model.Product.Picture"
+                 src="~/ProductPicture/@Model.Product.Picture" alt="@Model.Product.PictureAlt" title="@Model.Product.PictureTitle">
+            <a href="#img_zoom"></a>
+        </div>
+        <div class="product-preview image-small product_preview">
+            <div id="thumbnails" class="thumbnails_carousel owl-carousel" data-nav="true"
+                 data-autoplay="false" data-dots="false" data-loop="false" data-margin="10"
+                 data-responsive='{"0":{"items":3},"480":{"items":3},"600":{"items":3},"1000":{"items":3}}'>
+                @foreach (var item in Model.Product.Pictures)
+                {
+                    <a href="#" data-image="~/ProductPicture/@item.Picture"
+                       data-zoom-image="~/ProductPicture/@item.Picture" class="">
+                        <img src="~/ProductPicture/@item.Picture" 
+                             data-large-image="~/ProductPicture/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle">
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="details-infor RightDirection">
+        <h1 class="product-title">
+            @Model.Product.Name
+        </h1>
+        <div class="stars-rating">
+            <div class="star-rating">
+                <span class="star-5"></span>
+            </div>
+            <div class="count-star">
+                (7)
+            </div>
+        </div>
+        <div class="availability">
+            گروه محصول : 
+            <a href="#">@Model.Product.Category</a>
+        </div>
+        <div class="availability">
+            کد محصول : 
+            <a href="#">@Model.Product.Code</a>
+        </div>
+        @if (@Model.Product.InStock)
+        {
+            <div class="availability">
+                <span class="text-success">موجود در انبار</span>
+            </div>
+        }
+        else
+        {
+            <div class="availability">
+                <span class="text-danger">در انبار موجود نمی باشد</span>
+            </div>
+        }
+        <br/>
+        @if (Model.Product.HasDiscount)
+        {
+            <div class="ProductDetailPrice">
+                <del>
+                    @Model.Product.Price
+                </del>
+                                    
+                __
+
+                <ins>
+                    @Model.Product.PriceWithDiscount تومان
+                </ins>
+            </div>
+        }
+        else
+        {
+            <div class="ProductDetailPrice">
+                <ins>
+                    @Model.Product.Price تومان
+                </ins>
+            </div>
+        }
+        <hr />
+        <div class="product-details-description">
+            <p>
+                @Model.Product.ShortDescription
+            </p>
+        </div>
+        @*                            <div class="product-count-down">
+                                <div class="cleric-countdown is-countdown" 
+                                     data-y="2020" data-m="7" data-w="3" data-d="20" data-h="10" data-i="10" data-s="20">
+                                    <span class="box-count day">
+                                        <span class="number">00</span> 
+                                        <span class="text">Days</span>
+                                    </span>
+                                    <span class="box-count hrs">
+                                        <span class="number">00</span>
+                                        <span class="text">Hrs</span>
+                                    </span>
+                                    <span class="box-count min">
+                                        <span class="number">00</span> 
+                                        <span class="text">Mins</span>
+                                    </span>
+                                    <span class="box-count secs">
+                                        <span class="number">00</span> 
+                                        <span class="text">Secs</span>
+                                    </span>
+                                </div>
+                            </div>
+@*                            <div class="variations">
+                                <div class="attribute attribute_color">
+                                    <div class="color-text text-attribute">
+                                        Color:
+                                    </div>
+                                    <div class="list-color list-item">
+                                        <a href="#" class="color1"></a>
+                                        <a href="#" class="color2"></a>
+                                        <a href="#" class="color3 active"></a>
+                                        <a href="#" class="color4"></a>
+                                    </div>
+                                </div>
+                                <div class="attribute attribute_size">
+                                    <div class="size-text text-attribute">
+                                        Size:
+                                    </div>
+                                    <div class="list-size list-item">
+                                        <a href="#" class="">xs</a>
+                                        <a href="#" class="">s</a>
+                                        <a href="#" class="active">m</a>
+                                        <a href="#" class="">l</a>
+                                        <a href="#" class="">xl</a>
+                                        <a href="#" class="">xxl</a>
+                                    </div>
+                                </div>
+                            </div>*@
+        <div class="group-button">
+            <div class="yith-wcwl-add-to-wishlist">
+                <div class="yith-wcwl-add-button">
+                    <a href="#"> افزودن به علاقه مندی ها </a>
+                </div>
+            </div>
+            <br/>
+            <div class="">
+                <div class="">
+                    <span>تگ ها :
+                        <a asp-page="/Search">@Model.Product.Keywords</a>
+                    </span>
+                </div>
+            </div>
+            <br/>
+            @*                                <div class="size-chart-wrapp">
+                                    <div class="btn-size-chart">
+                                        <a id="size_chart" href="assets/images/size-chart.jpg" class="fancybox">View
+                                            Size Chart</a>
+                                    </div>
+                                </div>*@
+            <div class="quantity-add-to-cart">
+                <div class="quantity">
+                    <div class="control">
+                        <a class="btn-number qtyminus quantity-minus" href="#">-</a>
+                        <input type="text" data-step="1" data-min="0" value="1" title="Qty" class="input-qty qty" size="4">
+                        <a href="#" class="btn-number qtyplus quantity-plus">+</a>
+                    </div>
+                </div>
+                <button class="single_add_to_cart_button button">افزودن به سبد خرید</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab-details-product RightDirection">
+    <ul class="tab-link">
+        <li class="active">
+            <a data-toggle="tab" aria-expanded="true" href="#product-descriptions">توضیحات محصول</a>
+        </li>
+        <li class="">
+            <a data-toggle="tab" aria-expanded="false" href="#information">مشخصات محصول </a>
+        </li>
+        <li class="">
+            <a data-toggle="tab" aria-expanded="false" href="#reviews">نظرات</a>
+        </li>
+    </ul>
+    <div class="tab-container">
+        <div id="product-descriptions" class="tab-panel active">
+            <p>
+                @Model.Product.Description
+            </p>
+        </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+
+        <div id="information" class="tab-panel">
+            <table class="table table-bordered">
+                <tbody><tr>
+                    <td>Size</td>
+                    <td> XS / S / M / L</td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>White/ Black/ Teal/ Brown</td>
+                </tr>
+                <tr>
+                    <td>Properties</td>
+                    <td>Colorful Dress</td>
+                </tr>
+                </tbody></table>
+        </div>
+        <div id="reviews" class="tab-panel">
+            <div class="reviews-tab">
+                <div class="comments">
+                    <h2 class="reviews-title">
+                        1 review for
+                        <span>Rolf Round</span>
+                    </h2>
+                    <ol class="commentlist">
+                        <li class="conment">
+                            <div class="conment-container">
+                                <a href="#" class="avatar">
+                                    <img src="assets/images/avartar.png" alt="img">
+                                </a>
+                                <div class="comment-text">
+                                    <div class="stars-rating">
+                                        <div class="star-rating">
+                                            <span class="star-5"></span>
+                                        </div>
+                                        <div class="count-star">
+                                            (1)
+                                        </div>
+                                    </div>
+                                    <p class="meta">
+                                        <strong class="author">Cobus Bester</strong>
+                                        <span>-</span>
+                                        <span class="time">June 7, 2013</span>
+                                    </p>
+                                    <div class="description">
+                                        <p>Simple and effective design. One of my favorites.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="review_form_wrapper">
+                    <div class="review_form">
+                        <div class="comment-respond">
+                            <span class="comment-reply-title">Add a review </span>
+                            <form class="comment-form-review">
+                                <p class="comment-notes">
+                                    <span class="email-notes">Your email address will not be published.</span>
+                                    Required fields are marked
+                                    <span class="required">*</span>
+                                </p>
+                                <div class="comment-form-rating">
+                                    <label>Your rating</label>
+                                    <p class="stars">
+                                        <span>
+                                            <a class="star-1" href="#"></a>
+                                            <a class="star-2" href="#"></a>
+                                            <a class="star-3" href="#"></a>
+                                            <a class="star-4" href="#"></a>
+                                            <a class="star-5" href="#"></a>
+                                        </span>
+                                    </p>
+                                </div>
+                                <p class="comment-form-comment">
+                                    <label>
+                                        Your review
+                                        <span class="required">*</span>
+                                    </label>
+                                    <textarea title="review" id="comment" name="comment" cols="45" rows="8"></textarea>
+                                </p>
+                                <p class="comment-form-author">
+                                    <label>
+                                        Name
+                                        <span class="">*</span>
+                                    </label>
+                                    <input title="author" id="author" name="author" type="text" value="">
+                                </p>
+                                <p class="comment-form-email">
+                                    <label>
+                                        Email
+                                        <span class="">*</span>
+                                    </label>
+                                    <input title="email" id="email" name="email" type="email" value="">
+                                </p>
+                                <p class="form-submit">
+                                    <input name="submit" type="submit" id="submit" class="submit" value="Submit">
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear: left;"></div>
+<div class="related products product-grid">
+<h2 class="product-grid-title">You may also like</h2>
+<div class="owl-products owl-slick equal-container nav-center slick-initialized slick-slider" data-slick="{&quot;autoplay&quot;:false, &quot;autoplaySpeed&quot;:1000, &quot;arrows&quot;:true, &quot;dots&quot;:false, &quot;infinite&quot;:true, &quot;speed&quot;:800, &quot;rows&quot;:1}" data-responsive="[{&quot;breakpoint&quot;:&quot;2000&quot;,&quot;settings&quot;:{&quot;slidesToShow&quot;:3}},{&quot;breakpoint&quot;:&quot;1200&quot;,&quot;settings&quot;:{&quot;slidesToShow&quot;:2}},{&quot;breakpoint&quot;:&quot;992&quot;,&quot;settings&quot;:{&quot;slidesToShow&quot;:2}},{&quot;breakpoint&quot;:&quot;480&quot;,&quot;settings&quot;:{&quot;slidesToShow&quot;:1}}]"><span class="fa fa-angle-left slick-arrow" style="display: block;"></span>
+                            
+                            
+                            
+                            
+<div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 3880px; transform: translate3d(-1940px, 0px, 0px);"><div class="product-item style-1 slick-slide slick-cloned" style="width: 485px;" tabindex="-1" role="option" aria-describedby="slick-slide02" data-slick-index="-2" aria-hidden="true">
+    <div class="product-inner equal-element" style="height: 559px;">
+        <div class="product-top">
+            <div class="flash">
+                <span class="onnew">
+                    <span class="text">
+                        new
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="-1">
+                    <img src="assets/images/product-item-3.jpg" alt="img">
+                </a>
+                <div class="thumb-group">
+                    <div class="yith-wcwl-add-to-wishlist">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" tabindex="-1">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <a href="#" class="button quick-wiew-button" tabindex="-1">Quick View</a>
+                    <div class="loop-form-add-to-cart">
+                        <button class="single_add_to_cart_button button" tabindex="-1">Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="-1">Foyer Back</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                <div class="price">
+                    <del>
+                        $65
+                    </del>
+                    <ins>
+                        $45
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="product-item style-1 slick-slide slick-cloned" style="width: 485px;" tabindex="-1" role="option" aria-describedby="slick-slide03" data-slick-index="-1" aria-hidden="true">
+    <div class="product-inner equal-element" style="height: 559px;">
+        <div class="product-top">
+            <div class="flash">
+                <span class="onnew">
+                    <span class="text">
+                        new
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="-1">
+                    <img src="assets/images/product-item-4.jpg" alt="img">
+                </a>
+                <div class="thumb-group">
+                    <div class="yith-wcwl-add-to-wishlist">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" tabindex="-1">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <a href="#" class="button quick-wiew-button" tabindex="-1">Quick View</a>
+                    <div class="loop-form-add-to-cart">
+                        <button class="single_add_to_cart_button button" tabindex="-1">Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="-1">Go Gray</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                <div class="price">
+                    <del>
+                        $65
+                    </del>
+                    <ins>
+                        $45
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="product-item style-1 slick-slide" style="width: 485px;" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="true">
+    <div class="product-inner equal-element" style="height: 559px;">
+        <div class="product-top">
+            <div class="flash">
+                <span class="onnew">
+                    <span class="text">
+                        new
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="-1">
+                    <img src="assets/images/product-item-1.jpg" alt="img">
+                </a>
+                <div class="thumb-group">
+                    <div class="yith-wcwl-add-to-wishlist">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" tabindex="-1">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <a href="#" class="button quick-wiew-button" tabindex="-1">Quick View</a>
+                    <div class="loop-form-add-to-cart">
+                        <button class="single_add_to_cart_button button" tabindex="-1">Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="-1">Aluminum Plant</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                <div class="price">
+                    <del>
+                        $65
+                    </del>
+                    <ins>
+                        $45
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="product-item style-1 slick-slide" style="width: 485px;" tabindex="-1" role="option" aria-describedby="slick-slide01" data-slick-index="1" aria-hidden="true">
+    <div class="product-inner equal-element" style="height: 559px;">
+        <div class="product-top">
+            <div class="flash">
+                <span class="onnew">
+                    <span class="text">
+                        new
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="-1">
+                    <img src="assets/images/product-item-2.jpg" alt="img">
+                </a>
+                <div class="thumb-group">
+                    <div class="yith-wcwl-add-to-wishlist">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" tabindex="-1">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <a href="#" class="button quick-wiew-button" tabindex="-1">Quick View</a>
+                    <div class="loop-form-add-to-cart">
+                        <button class="single_add_to_cart_button button" tabindex="-1">Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="-1">Rolf Round</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                <div class="price">
+                    <del>
+                        $65
+                    </del>
+                    <ins>
+                        $45
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-item style-1 slick-slide slick-current slick-active first-slick" style="width: 485px;" tabindex="-1" role="option" aria-describedby="slick-slide02" data-slick-index="2" aria-hidden="false">
+    <div class="product-inner equal-element" style="height: 559px;">
+        <div class="product-top">
+            <div class="flash">
+                <span class="onnew">
+                    <span class="text">
+                        new
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="0">
+                    <img src="assets/images/product-item-3.jpg" alt="img">
+                </a>
+                <div class="thumb-group">
+                    <div class="yith-wcwl-add-to-wishlist">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" tabindex="0">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <a href="#" class="button quick-wiew-button" tabindex="0">Quick View</a>
+                    <div class="loop-form-add-to-cart">
+                        <button class="single_add_to_cart_button button" tabindex="0">Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="0">Foyer Back</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                <div class="price">
+                    <del>
+                        $65
+                    </del>
+                    <ins>
+                        $45
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="product-item style-1 slick-slide slick-active last-slick" style="width: 485px;" tabindex="-1" role="option" aria-describedby="slick-slide03" data-slick-index="3" aria-hidden="false">
+    <div class="product-inner equal-element" style="height: 559px;">
+        <div class="product-top">
+            <div class="flash">
+                <span class="onnew">
+                    <span class="text">
+                        new
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="0">
+                    <img src="assets/images/product-item-4.jpg" alt="img">
+                </a>
+                <div class="thumb-group">
+                    <div class="yith-wcwl-add-to-wishlist">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" tabindex="0">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <a href="#" class="button quick-wiew-button" tabindex="0">Quick View</a>
+                    <div class="loop-form-add-to-cart">
+                        <button class="single_add_to_cart_button button" tabindex="0">Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="0">Go Gray</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                <div class="price">
+                    <del>
+                        $65
+                    </del>
+                    <ins>
+                        $45
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="product-item style-1 slick-slide slick-cloned" style="width: 485px;" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="4" aria-hidden="true">
+    <div class="product-inner equal-element" style="height: 559px;">
+        <div class="product-top">
+            <div class="flash">
+                <span class="onnew">
+                    <span class="text">
+                        new
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="-1">
+                    <img src="assets/images/product-item-1.jpg" alt="img">
+                </a>
+                <div class="thumb-group">
+                    <div class="yith-wcwl-add-to-wishlist">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" tabindex="-1">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <a href="#" class="button quick-wiew-button" tabindex="-1">Quick View</a>
+                    <div class="loop-form-add-to-cart">
+                        <button class="single_add_to_cart_button button" tabindex="-1">Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="-1">Aluminum Plant</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                <div class="price">
+                    <del>
+                        $65
+                    </del>
+                    <ins>
+                        $45
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="product-item style-1 slick-slide slick-cloned" style="width: 485px;" tabindex="-1" role="option" aria-describedby="slick-slide01" data-slick-index="5" aria-hidden="true">
+    <div class="product-inner equal-element" style="height: 559px;">
+        <div class="product-top">
+            <div class="flash">
+                <span class="onnew">
+                    <span class="text">
+                        new
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="product-thumb">
+            <div class="thumb-inner">
+                <a href="#" tabindex="-1">
+                    <img src="assets/images/product-item-2.jpg" alt="img">
+                </a>
+                <div class="thumb-group">
+                    <div class="yith-wcwl-add-to-wishlist">
+                        <div class="yith-wcwl-add-button">
+                            <a href="#" tabindex="-1">Add to Wishlist</a>
+                        </div>
+                    </div>
+                    <a href="#" class="button quick-wiew-button" tabindex="-1">Quick View</a>
+                    <div class="loop-form-add-to-cart">
+                        <button class="single_add_to_cart_button button" tabindex="-1">Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h5 class="product-name product_title">
+                <a href="#" tabindex="-1">Rolf Round</a>
+            </h5>
+            <div class="group-info">
+                <div class="stars-rating">
+                    <div class="star-rating">
+                        <span class="star-3"></span>
+                    </div>
+                    <div class="count-star">
+                        (3)
+                    </div>
+                </div>
+                <div class="price">
+                    <del>
+                        $65
+                    </del>
+                    <ins>
+                        $45
+                    </ins>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div></div><span class="fa fa-angle-right slick-arrow" style="display: block;"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
