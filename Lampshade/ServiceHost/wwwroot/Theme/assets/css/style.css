@@ -7151,7 +7151,6 @@ ul.list-products {
     margin: 0;
     text-align: center;
     position: relative;
-    
 }
 
     .cleric-tabs .tab-link::before {
@@ -7167,7 +7166,6 @@ ul.list-products {
     .cleric-tabs .tab-link li {
         display: inline-block;
         list-style: none;
-        
     }
 
         .cleric-tabs .tab-link li a {
@@ -10728,11 +10726,12 @@ iframe {
 /*banner home 10*/
 .item-banner.style10 .inner {
     background-image: url(../images/banner-home-8.jpg);
+    height: 300px;
 }
 
 .item-banner.style10 .banner-content {
-    padding-top: 73px;
-    padding-right: 200px;
+    padding-top: 40px;
+    padding-right: 20px;
     padding-bottom: 77px;
     padding-left: 50px;
     margin-bottom: 30px;
@@ -10755,11 +10754,12 @@ iframe {
 
 .item-banner.style11 .inner {
     background-image: url(../images/banner-home-9.jpg);
+    height: 300px;
 }
 
 .item-banner.style11 .banner-content {
-    padding-top: 65px;
-    padding-right: 330px;
+    padding-top: 15px;
+    padding-right: 260px;
     padding-bottom: 58px;
     padding-left: 50px;
     margin-bottom: 30px;

@@ -1,0 +1,16 @@
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\obj\Debug\netcoreapp3.1\BlogManagement.Application.csprojAssemblyReference.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\obj\Debug\netcoreapp3.1\BlogManagement.Application.AssemblyInfoInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\obj\Debug\netcoreapp3.1\BlogManagement.Application.AssemblyInfo.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\obj\Debug\netcoreapp3.1\BlogManagement.Application.csproj.CoreCompileInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\BlogManagement.Application.deps.json
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\BlogManagement.Application.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\BlogManagement.Application.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\0_Framework.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\BlogManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\BlogManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\bin\Debug\netcoreapp3.1\0_Framework.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\obj\Debug\netcoreapp3.1\BlogManagement.Application.csproj.CopyComplete
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\obj\Debug\netcoreapp3.1\BlogManagement.Application.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application\obj\Debug\netcoreapp3.1\BlogManagement.Application.pdb

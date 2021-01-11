@@ -1,0 +1,12 @@
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contract.deps.json
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\bin\Debug\netcoreapp3.1\0_Framework.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\bin\Debug\netcoreapp3.1\0_Framework.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\obj\Debug\netcoreapp3.1\BlogManagement.Application.Contract.csprojAssemblyReference.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\obj\Debug\netcoreapp3.1\BlogManagement.Application.Contract.AssemblyInfoInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\obj\Debug\netcoreapp3.1\BlogManagement.Application.Contract.AssemblyInfo.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\obj\Debug\netcoreapp3.1\BlogManagement.Application.Contract.csproj.CoreCompileInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\obj\Debug\netcoreapp3.1\BlogManagement.Application.Contract.csproj.CopyComplete
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\obj\Debug\netcoreapp3.1\BlogManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Application.Contract\obj\Debug\netcoreapp3.1\BlogManagement.Application.Contract.pdb

@@ -1,0 +1,87 @@
+﻿@model ServiceHost.Pages.ProductModel
+@{
+}
+
+        <div id="reviews" class="tab-panel">
+            <div class="reviews-tab">
+                <div class="comments">
+                    <h2 class="reviews-title">
+                        تعداد نظرات ارزشمند برای این محصول : (@Model.Product.Comments.Count)
+                    </h2>
+                    <br/>
+                    <br/>
+                    <ol class="commentlist">
+                        @foreach (var item in Model.Product.Comments)
+                        {
+                            <li class="conment">
+                                <div class="conment-container">
+                                    <a href="#" class="avatar">
+                                        <img src="~/ProductPicture/avartar.png" alt="@item.Message" title="@item.Message">
+                                    </a>
+                                    <div class="comment-text">
+                                        <div class="stars-rating">
+                                            <div class="star-rating">
+                                                <span class="star-5"></span>
+                                            </div>
+                                        </div>
+                                        <p class="meta">
+                                            <strong class="author">@item.Name</strong>
+                                            <span>-</span>
+                                            <span class="time">@item.CreationDate</span>
+                                        </p>
+                                        <div class="description">
+                                            <p>@item.Message</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ol>
+                </div>
+                <br/>
+                <br/>
+                <div class="review_form_wrapper">
+                    <div class="review_form">
+                        <div class="comment-respond">
+                            <br/>
+                            <form method="post" class="comment-form-review">
+                                <p class="comment-notes">
+                                    <span class="email-notes">قسمت های ستاره دار الزامی می باشند</span>
+                                    
+                                    <span class="required">*</span>
+                                </p>
+                                <br/>
+                                <p class="comment-form-comment">
+                                    <label>
+                                        متن نظر
+                                        <span class="required">*</span>
+                                    </label>
+                                    <textarea title="message" id="message" placeholder="نظر خود را بنویسید ..." name="message" cols="45"
+                                     rows="8">
+                                    </textarea>
+                                </p>
+                                <p class="comment-form-author">
+                                    <label>
+                                        نام و نام خانوادگی
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input title="name" id="name" name="name" type="text" value="">
+                                </p>
+                                <p class="comment-form-email">
+                                    <label>
+                                        ایمیل
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input title="email" id="email" name="email" type="email" value="">
+                                </p>
+                                <p class="form-submit">
+                                    <input name="submit"type="submit" value="ثبت نظر ارزشمندتان">
+                                </p>
+                                <input name="productId" type="hidden" value="@Model.Product.Id">
+                                <input name="productSlug" type="hidden" value="@Model.Product.Slug">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

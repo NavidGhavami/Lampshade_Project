@@ -111,53 +111,6 @@
                 @Model.Product.ShortDescription
             </p>
         </div>
-        @*                            <div class="product-count-down">
-                                <div class="cleric-countdown is-countdown" 
-                                     data-y="2020" data-m="7" data-w="3" data-d="20" data-h="10" data-i="10" data-s="20">
-                                    <span class="box-count day">
-                                        <span class="number">00</span> 
-                                        <span class="text">Days</span>
-                                    </span>
-                                    <span class="box-count hrs">
-                                        <span class="number">00</span>
-                                        <span class="text">Hrs</span>
-                                    </span>
-                                    <span class="box-count min">
-                                        <span class="number">00</span> 
-                                        <span class="text">Mins</span>
-                                    </span>
-                                    <span class="box-count secs">
-                                        <span class="number">00</span> 
-                                        <span class="text">Secs</span>
-                                    </span>
-                                </div>
-                            </div>
-@*                            <div class="variations">
-                                <div class="attribute attribute_color">
-                                    <div class="color-text text-attribute">
-                                        Color:
-                                    </div>
-                                    <div class="list-color list-item">
-                                        <a href="#" class="color1"></a>
-                                        <a href="#" class="color2"></a>
-                                        <a href="#" class="color3 active"></a>
-                                        <a href="#" class="color4"></a>
-                                    </div>
-                                </div>
-                                <div class="attribute attribute_size">
-                                    <div class="size-text text-attribute">
-                                        Size:
-                                    </div>
-                                    <div class="list-size list-item">
-                                        <a href="#" class="">xs</a>
-                                        <a href="#" class="">s</a>
-                                        <a href="#" class="active">m</a>
-                                        <a href="#" class="">l</a>
-                                        <a href="#" class="">xl</a>
-                                        <a href="#" class="">xxl</a>
-                                    </div>
-                                </div>
-                            </div>*@
         <div class="group-button">
             <div class="yith-wcwl-add-to-wishlist">
                 <div class="yith-wcwl-add-button">
@@ -204,16 +157,6 @@
                 @Model.Product.Description
             </p>
         </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-
         <div id="information" class="tab-panel">
             <table class="table table-bordered">
                 <tbody><tr>
@@ -231,89 +174,9 @@
                 </tbody></table>
         </div>
 
-        <div id="reviews" class="tab-panel">
-            <div class="reviews-tab">
-                <div class="comments">
-                    <h2 class="reviews-title">
-                        تعداد نظرات ارزشمند برای این محصول : (@Model.Product.Comments.Count)
-                    </h2>
-                    <br/>
-                    <br/>
-                    <ol class="commentlist">
-                        @foreach (var item in Model.Product.Comments)
-                        {
-                            <li class="conment">
-                                <div class="conment-container">
-                                    <a href="#" class="avatar">
-                                        <img src="~/ProductPicture/avartar.png" alt="@item.Message" title="@item.Message">
-                                    </a>
-                                    <div class="comment-text">
-                                        <div class="stars-rating">
-                                            <div class="star-rating">
-                                                <span class="star-5"></span>
-                                            </div>
-                                        </div>
-                                        <p class="meta">
-                                            <strong class="author">@item.Name</strong>
-                                            <span>-</span>
-                                            <span class="time">@item.CreationDate</span>
-                                        </p>
-                                        <div class="description">
-                                            <p>@item.Message</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        }
-                    </ol>
-                </div>
-                <br/>
-                <br/>
-                <div class="review_form_wrapper">
-                    <div class="review_form">
-                        <div class="comment-respond">
-                            <br/>
-                            <form method="post" class="comment-form-review">
-                                <p class="comment-notes">
-                                    <span class="email-notes">قسمت های ستاره دار الزامی می باشند</span>
-                                    
-                                    <span class="required">*</span>
-                                </p>
-                                <br/>
-                                <p class="comment-form-comment">
-                                    <label>
-                                        متن نظر
-                                        <span class="required">*</span>
-                                    </label>
-                                    <textarea title="message" id="message" placeholder="نظر خود را بنویسید ..." name="message" cols="45"
-                                     rows="8">
-                                    </textarea>
-                                </p>
-                                <p class="comment-form-author">
-                                    <label>
-                                        نام و نام خانوادگی
-                                        <span class="required">*</span>
-                                    </label>
-                                    <input title="name" id="name" name="name" type="text" value="">
-                                </p>
-                                <p class="comment-form-email">
-                                    <label>
-                                        ایمیل
-                                        <span class="required">*</span>
-                                    </label>
-                                    <input title="email" id="email" name="email" type="email" value="">
-                                </p>
-                                <p class="form-submit">
-                                    <input name="submit"type="submit" value="ثبت نظر ارزشمندتان">
-                                </p>
-                                <input name="productId" type="hidden" value="@Model.Product.Id">
-                                <input name="productSlug" type="hidden" value="@Model.Product.Slug">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @await Component.InvokeAsync("Comment")
+
+
     </div>
 </div>
 <div style="clear: left;"></div>
