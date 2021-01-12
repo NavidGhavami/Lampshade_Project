@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Article\Article.cs~RF25fa909.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
     <ProjectReference Include="..\BlogManagement.Application.Contract\BlogManagement.Application.Contract.csproj" />
   </ItemGroup>

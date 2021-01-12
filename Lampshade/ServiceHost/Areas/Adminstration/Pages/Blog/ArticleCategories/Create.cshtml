@@ -83,6 +83,15 @@
         </div>
         <div class="row">
             <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="CanonicalAddress" class="control-label">آدرس کانونیکال</label>
+                    <input type="text" class="form-control" asp-for="CanonicalAddress">
+                    <span asp-validation-for="CanonicalAddress" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="form-group no-margin">
                     <label asp-for="ShortDescription" class="control-label">توضیحات کوتاه</label>
                     <textarea class="form-control autogrow" asp-for="ShortDescription" onchange="fillField('ShortDescription', 'MetaDescription')"

@@ -1,4 +1,5 @@
-﻿using BlogManagement.Domain.ArticleCategory;
+﻿using BlogManagement.Domain.Article;
+using BlogManagement.Domain.ArticleCategory;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -14,10 +15,16 @@ namespace BlogManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.Name).HasMaxLength(500);
             builder.Property(x => x.ShortDescription).HasMaxLength(1000);
             builder.Property(x => x.Picture).HasMaxLength(500);
+            builder.Property(x => x.PictureAlt).HasMaxLength(500);
+            builder.Property(x => x.PictureTitle).HasMaxLength(500);
             builder.Property(x => x.Slug).HasMaxLength(600);
             builder.Property(x => x.Keywords).HasMaxLength(100);
             builder.Property(x => x.MetaDescription).HasMaxLength(150);
             builder.Property(x => x.CanonicalAddress).HasMaxLength(1000);
+
+            builder.HasMany(x => x.Articles)
+                   .WithOne(x => x.ArticleCategory)
+                   .HasForeignKey(x => x.CategoryId);
 
         }
     }

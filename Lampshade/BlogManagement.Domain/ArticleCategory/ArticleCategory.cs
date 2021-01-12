@@ -1,4 +1,5 @@
-﻿using System.Security.Principal;
+﻿using System.Collections.Generic;
+using System.Security.Principal;
 using _0_Framework;
 
 namespace BlogManagement.Domain.ArticleCategory
@@ -16,6 +17,7 @@ namespace BlogManagement.Domain.ArticleCategory
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
         public string CanonicalAddress { get; private set; }
+        public List<Article.Article> Articles { get; private set; }
 
 
         public ArticleCategory(string name, string picture, string pictureAlt, string pictureTitle, string shortDescription, string description, int showOrder, string slug,

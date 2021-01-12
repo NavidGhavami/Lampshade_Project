@@ -27,7 +27,9 @@ namespace BlogManagement.Application
 
 
             var slug = command.Slug.Slugify();
-            var pictureName = _fileUploader.Upload(command.Picture, slug);
+            var path = $"{"Blog"}/{slug}";
+            var pictureName = _fileUploader.Upload(command.Picture, path);
+
             var articleCategory = new ArticleCategory(command.Name, pictureName, command.PictureAlt,
                 command.PictureTitle, command.ShortDescription, command.Description, command.ShowOrder,
                  slug, command.Keywords, command.MetaDescription, command.CanonicalAddress);
@@ -51,7 +53,8 @@ namespace BlogManagement.Application
 
            
             var slug = command.Slug.Slugify();
-            var pictureName = _fileUploader.Upload(command.Picture, slug);
+            var path = $"{"Blog"}/{slug}";
+            var pictureName = _fileUploader.Upload(command.Picture, path);
 
             articleCategory.Edit(command.Name, pictureName, command.PictureAlt,
                 command.PictureTitle, command.ShortDescription, command.Description, command.ShowOrder,
@@ -69,6 +72,11 @@ namespace BlogManagement.Application
         public EditArticleCategory GetDetails(long id)
         {
             return _articleCategoryRepository.GetDetails(id);
+        }
+
+        public List<ArticleCategoryViewModel> GetArticleCategories()
+        {
+            return _articleCategoryRepository.GetArticleCategories();
         }
     }
 }
