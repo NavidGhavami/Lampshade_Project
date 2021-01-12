@@ -46,14 +46,14 @@
                                 </div>
                                 <div class="product-thumb">
                                     <div class="thumb-inner">
-                                        <a href="#">
+                                        <a asp-page="/Product" asp-route-id="@item.Slug">
                                             <img src="~/ProductPicture/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="product-info">
                                     <h5 class="product-name product_title">
-                                        <a href="#">@item.Name</a>
+                                        <a asp-page="/Product" asp-route-id="@item.Slug">@item.Name</a>
                                     </h5>
                                     <div class="group-info">
                                         <div class="stars-rating CategoryList">

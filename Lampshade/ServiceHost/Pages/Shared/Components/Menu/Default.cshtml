@@ -1,4 +1,7 @@
-﻿@{
+﻿@model _01_LampshadeQuery.MenuModel
+
+
+@{
 }
 
 
@@ -16,48 +19,13 @@
                 </div>
                 <div class="block-content verticalmenu-content">
                     <ul class="cleric-nav-vertical vertical-menu">
-                        <li class="menu-item">
-                            <a href="#" class="cleric-menu-item-title" title="New Arrivals">New Arrivals</a>
-                        </li>
-                        <li class="menu-item">
-                            <a title="Hot Sale" href="#" class="cleric-menu-item-title">Hot Sale</a>
-                        </li>
-                        <li class="menu-item menu-item-has-children">
-                            <a title="Accessories" href="#" class="cleric-menu-item-title">Accessories</a>
-                            <span class="toggle-submenu"></span>
-                            @* <ul role="menu" class=" submenu">
-                                <li class="menu-item">
-                                    <a title="Living" href="#" class="cleric-item-title">Living</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a title="Accents" href="#" class="cleric-item-title">Accents</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a title="New Arrivals" href="#" class="cleric-item-title">New Arrivals</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a title="Accessories" href="#" class="cleric-item-title">Accessories</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a title="Bedroom" href="#" class="cleric-item-title">Bedroom</a>
-                                </li>
-                            </ul>*@
-                        </li>
-                        <li class="menu-item">
-                            <a title="Accents" href="#" class="cleric-menu-item-title">Accents</a>
-                        </li>
-                        <li class="menu-item">
-                            <a title="Tables" href="#" class="cleric-menu-item-title">Tables</a>
-                        </li>
-                        <li class="menu-item">
-                            <a title="Dining" href="#" class="cleric-menu-item-title">Dining</a>
-                        </li>
-                        <li class="menu-item">
-                            <a title="Lighting" href="#" class="cleric-menu-item-title">Lighting</a>
-                        </li>
-                        <li class="menu-item">
-                            <a title="Office" href="#" class="cleric-menu-item-title">Office</a>
-                        </li>
+                        
+                        @foreach (var item in Model.ProductCategories)
+                        {
+                            <li class="menu-item">
+                                <a asp-page="/ProductCategory" asp-route-id="@item.Slug" class="cleric-menu-item-title" title="@item.Name">@item.Name</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -68,51 +36,27 @@
                             <a asp-page="./Index" class="cleric-menu-item-title" title="صفحه اصلی">صفحه اصلی</a>
                         </li>
                         <li class="menu-item menu-item-has-children">
-                            <a href="gridproducts.html" class="cleric-menu-item-title" title="Shop">محصولات</a>
+                            <a class="cleric-menu-item-title" title="محصولات">محصولات</a>
                             <span class="toggle-submenu"></span>
                             <ul class="submenu">
-                                <li class="menu-item">
-                                    <a href="gridproducts.html">Grid Fullwidth</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="gridproducts_leftsidebar.html">Grid Left sidebar</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="gridproducts_bannerslider.html">Grid Bannerslider</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="listproducts.html">List</a>
-                                </li>
+                                @foreach (var item in Model.ProductCategories)
+                                {
+                                    <li class="menu-item">
+                                        <a asp-page="/ProductCategory" asp-route-id="@item.Slug">@item.Name</a>
+                                    </li>
+                                }
                             </ul>
                         </li>
                         <li class="menu-item  menu-item-has-children">
-                            <a href="index-2.html" class="cleric-menu-item-title" title="Home">دکوری</a>
+                            <a title="مقالات">مقالات</a>
                             <span class="toggle-submenu"></span>
                             <ul class="submenu">
-                                <li class="menu-item">
-                                    <a href="index-2.html">Home 01</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="home2.html">Home 02</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="home3.html">Home 03</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item  menu-item-has-children">
-                            <a href="index-2.html" class="cleric-menu-item-title" title="Home">مقالات</a>
-                            <span class="toggle-submenu"></span>
-                            <ul class="submenu">
-                                <li class="menu-item">
-                                    <a href="index-2.html">Home 01</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="home2.html">Home 02</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="home3.html">Home 03</a>
-                                </li>
+                               @foreach (var item in Model.ArticleCategories)
+                               {
+                                   <li class="menu-item">
+                                       <a asp-page="/ArticleCategories" asp-route-id="@item.Slug">@item.Name</a>
+                                   </li>
+                               }
                             </ul>
                         </li>
                         <li class="menu-item">

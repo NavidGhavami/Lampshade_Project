@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
@@ -8,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogManagement.Infrastructure.EFCore.Repository
 {
-    public class ArticleRepository : RepositoryBase<long,Article>,IArticleRepository
+    public class ArticleRepository : RepositoryBase<long, Article>, IArticleRepository
     {
         private readonly BlogContext _blogContext;
         public ArticleRepository(BlogContext blogContext) : base(blogContext)
@@ -20,7 +21,7 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
         {
             return _blogContext.Articles.Select(x => new EditArticle
             {
-                Id=x.Id,
+                Id = x.Id,
                 Title = x.Title,
                 ShortDescription = x.ShortDescription,
                 Description = x.Description,
@@ -45,7 +46,7 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
                 Title = x.Title,
                 Picture = x.Picture,
                 Category = x.ArticleCategory.Name,
-                ShortDescription = x.ShortDescription,
+                ShortDescription = x.ShortDescription.Substring(0, Math.Min(x.ShortDescription.Length, 50)) + "...",
                 PublishDate = x.PublishDate.ToFarsi(),
 
             });
@@ -54,12 +55,12 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
             {
                 query = query.Where(x => x.Title.Contains(searchModel.Title));
             }
-            if (searchModel.CategoryId>0)
+            if (searchModel.CategoryId > 0)
             {
-                query = query.Where(x => x.CategoryId==searchModel.CategoryId);
+                query = query.Where(x => x.CategoryId == searchModel.CategoryId);
             }
 
-            return query.OrderByDescending(x=>x.Id).ToList();
+            return query.OrderByDescending(x => x.Id).ToList();
         }
 
         public Article GetWithCategory(long id)

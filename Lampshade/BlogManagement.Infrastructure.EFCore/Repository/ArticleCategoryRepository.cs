@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Application;
 using _0_Framework.Domain;
@@ -21,16 +22,19 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
 
         public List<ArticleCategoryViewModel> Search(ArticleCategorySearchModel searchModel)
         {
-            var query = _blogContext.ArticleCategories.Select(x => new ArticleCategoryViewModel
-            {
-                Id = x.Id,
-                Name = x.Name,
-                ShowOrder = x.ShowOrder,
-                Picture = x.Picture,
-                ShortDescription = x.ShortDescription,
-                CreationDate = x.CreationDate.ToFarsi(),
-                
-            });
+            var query = _blogContext.ArticleCategories
+                .Include(x => x.Articles)
+                .Select(x => new ArticleCategoryViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    ShowOrder = x.ShowOrder,
+                    Picture = x.Picture,
+                    ShortDescription = x.ShortDescription.Substring(0, Math.Min(x.ShortDescription.Length, 50)) + "...",
+                    CreationDate = x.CreationDate.ToFarsi(),
+                    ArticlesCount = x.Articles.Count
+
+                });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
             {
@@ -61,7 +65,7 @@ namespace BlogManagement.Infrastructure.EFCore.Repository
 
         public string GetSlugBy(long id)
         {
-            return _blogContext.ArticleCategories.Select(x => new {x.Id, x.Slug})
+            return _blogContext.ArticleCategories.Select(x => new { x.Id, x.Slug })
                 .FirstOrDefault(x => x.Id == id)
                 ?.Slug;
         }

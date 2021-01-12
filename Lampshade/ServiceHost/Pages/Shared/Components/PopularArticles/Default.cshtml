@@ -1,0 +1,24 @@
+﻿@model List<_01_LampshadeQuery.Contracts.Article.ArticleQueryModel>
+@{
+}
+
+<div class="widget widget-post RightDirection">
+                        <h3 class="widgettitle">آخرین مقالات</h3>
+    <ul class="cleric-posts">
+        @foreach (var item in Model)
+        {
+            <li class="widget-post-item">
+                <div class="thumb-blog">
+                    <img src="~/ProductPicture/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle">
+                </div>
+                <div class="post-content">
+                    <div class="cat">
+                        <a href="#">@item.CategoryName</a>
+                    </div>
+                    <h5 class="post-title"><a href="#">@item.Title </a>
+                    </h5>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

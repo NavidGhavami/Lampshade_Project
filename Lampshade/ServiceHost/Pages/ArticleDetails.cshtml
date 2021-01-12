@@ -1,0 +1,296 @@
+﻿@page "{id}"
+@model ServiceHost.Pages.ArticleDetailsModel
+@{
+    ViewData["Title"] = "صفحه مقاله";
+}
+
+<div class="main-content main-content-blog single left-sidebar">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="breadcrumb-trail breadcrumbs">
+                <ul class="trail-items breadcrumb">
+                    <li class="trail-item trail-begin">
+                        <a asp-page="/Index">صفحه اصلی</a>
+                    </li>
+                    <li class="trail-item">
+                        <a href="#">@Model.Article.CategoryName</a>
+                    </li>
+                    <li class="trail-item trail-end active">
+                        @Model.Article.Title
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="row">
+            <div class="content-area content-blog col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                <div class="site-main">
+                    <div class="post-item">
+                        <div class="post-format RightDirection">
+                            <a href="#">
+                                <img src="~/ProductPicture/@Model.Article.Picture" alt="@Model.Article.PictureAlt" title="@Model.Article.PictureTitle">
+                            </a>
+                        </div>
+                        <div class="post-infor RightDirection">
+                            <div class="category-blog">
+                                <a href="#">@Model.Article.CategoryName</a>
+                            </div>
+                            <h1 class="post-title">
+                                <a href="#">@Model.Article.Title</a>
+                            </h1>
+                            <div class="main-info-post">
+                                
+                                <p>
+                                    @Html.Raw(Model.Article.Description)
+                                </p>
+
+                            </div>
+                            <div class="main-info-post TopPadding">
+                                
+                                <span>
+                                    نوشته شده در تاریخ :  @Model.Article.PublishDate
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="tags tags-blog RightDirection">
+                        <h3 class="widgettitle">
+                            تگ ها :
+                        </h3>
+                        <ul class="tagcloud">
+                           
+                               @foreach (var tag in Model.Article.KeywordList)
+                               {
+                                   <li class="tag-cloud-link">
+                                       <a asp-page="/Search" asp-route-value="@tag">@tag</a>
+                                   </li>
+                               }
+                            
+                        </ul>
+                    </div>
+                    <div class="view-share">
+                        <div class="author-view">
+                            <div class="author">
+                                <h3 class="name">
+                                    "برای رسیدن به بیشترین پتانسیل خود باید با بزرگترین ترس خود مبارزه کنید"
+                                </h3>
+                            </div>
+                            <div class="review">
+                                <div class="view">
+										<span class="icon-view">
+											<i class="fa fa-eye" aria-hidden="true"></i>
+										</span>
+                                    <span class="count">
+											631
+										</span>
+                                </div>
+                                <div class="s-comments">
+										<span class="icon-cmt">
+											<i class="fa fa-commenting" aria-hidden="true"></i>
+										</span>
+                                    <span class="count">
+											82
+										</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="share">
+                            <h3 class="title">اشتراک گذاری</h3>
+                            <i class="icon fa fa-facebook-square" aria-hidden="true"></i>
+                            <i class="icon fa fa-instagram" aria-hidden="true"></i>
+                            <i class="icon fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="comments-area RightDirection">
+                        <h3 class="custom_blog_title">
+                            نظرات <span class="count">(2)</span>
+                        </h3>
+                        <form class="comment-form">
+                            <p class="comment-reply-content">
+                                <textarea rows="6" placeholder="نظرتان را اینجا بنویسید" class="input-form"></textarea>
+                            </p>
+                            <p class="form-submit">
+									<span class="controll">
+										<i class="icon fa fa-file-image-o" aria-hidden="true"></i>
+										<i class="icon fa fa-paperclip" aria-hidden="true"></i>
+										<i class="icon fa fa-smile-o" aria-hidden="true"></i>
+										<button class="submit button">ثبت نظر ارزشمندتان</button>		
+									</span>
+                            </p>
+                        </form>
+                        <ul class="comment-list">
+                            <li class="comment">
+                                <div class="comment-item">
+                                    <div class="author-view">
+                                        <div class="author">
+                                            <div class="avt">
+                                                <img src="assets/images/avt-blog1.png" alt="img">
+                                            </div>
+                                            <h3 class="name">
+                                                Adam Smith
+                                            </h3>
+                                        </div>
+                                        <div class="date-reply-comment">
+												<span class="date-comment">
+													4 days ago
+												</span>
+                                        </div>
+                                    </div>
+                                    <div class="comment-body">
+                                        <div class="comment-content">
+                                            <p>
+                                                Nam sed eleifend dui, eu eleifend leo.
+                                                Mauris ornare eros quis placerat mollis.
+                                                Duis ornare euismod risus at dictum.
+                                                Proinat porttitor metus.
+                                                Nunc luctus nisl suscipit, hendrerit ligula non.
+                                            </p>
+                                        </div>
+                                        <div class="comment-reply-link">
+												<span class="Comment">
+													<i class="icon fa fa-commenting" aria-hidden="true"></i>
+													Comment
+												</span>
+                                            <span class="like">
+													<i class="icon fa fa-thumbs-o-up" aria-hidden="true"></i>
+													1
+												</span>
+                                            <span class="dislike">
+													<i class="icon fa fa-thumbs-o-down" aria-hidden="true"></i>
+												</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="children">
+                                    <li>
+                                        <div class="comment-item">
+                                            <div class="author-view">
+                                                <div class="author">
+                                                    <div class="avt">
+                                                        <img src="assets/images/avt-blog1.png" alt="img">
+                                                    </div>
+                                                    <h3 class="name">
+                                                        Samuel Godi
+                                                    </h3>
+                                                </div>
+                                                <div class="date-reply-comment">
+														<span class="date-comment">
+															4 days ago
+														</span>
+                                                </div>
+                                            </div>
+                                            <div class="comment-body">
+                                                <div class="comment-content">
+                                                    <p>
+                                                        Ut pellentesque gravida justo non rhoncus.
+                                                        Nunc ullamcorper tortor id aliquet luctus.
+                                                        Proin varius aliquam consequat.Curabitur a commodo diam, vitae
+                                                        pellentesque urna.
+                                                    </p>
+                                                </div>
+                                                <div class="comment-reply-link">
+														<span class="Comment">
+															<i class="fa fa-commenting" aria-hidden="true"></i>
+															Comment
+														</span>
+                                                    <span class="like">
+															<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+															9
+														</span>
+                                                    <span class="dislike">
+															<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+															1
+														</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pagination clearfix style1">
+                        <div class="nav-link">
+                            <a href="#" class="page-numbers"><i class="icon fa fa-angle-left"
+                                                                aria-hidden="true"></i></a>
+                            <a href="#" class="page-numbers">1</a>
+                            <a href="#" class="page-numbers">2</a>
+                            <a href="#" class="page-numbers current">3</a>
+                            <a href="#" class="page-numbers"><i class="icon fa fa-angle-right"
+                                                                aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar sidebar-single-blog col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                <div class="wrapper-sidebar">
+                    <div class="widget widget-socials">
+                        <h3 class="widgettitle">
+                            ما را دنبال کنید
+                        </h3>
+                        <div class="content-socials">
+                            <div class="social-list">
+                                <a href="#" target="_blank" class="social-item">
+                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" target="_blank" class="social-item">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" target="_blank" class="social-item">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    
+                    <div class="widget widget-categories RightDirection">
+                        <h3 class="widgettitle">گروه مقالات</h3>
+                        <ul class="list-categories">
+                            @foreach (var item in Model.ArticleCategory)
+                            {
+                                <li>
+                                    <a asp-page="/ArticleCategory" asp-route-id="@item.Slug">
+                                        <label for="cb1" class="label-text">
+                                            <span class="counter">تعداد مقالات این گروه: (@item.ArticlesCount)</span>
+                                            <br/>
+                                           <b> عنوان گروه مقاله : @item.Name</b>
+                                        </label>
+                                    </a>
+                                    <hr/>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                    @await Component.InvokeAsync("PopularArticles")
+                    
+                   
+
+                    <div class="widget widget-tags ">
+                        <h3 class="widgettitle">
+                            محبوبترین واژگان جستجو شده
+                        </h3>
+                        <ul class="tagcloud RightDirection">
+                            @foreach (var tag in Model.Article.KeywordList)
+                            {
+                                <li class="tag-cloud-link">
+                                    <a asp-page="/Search" asp-route-value="@tag">@tag</a>
+                                </li>
+                            }
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

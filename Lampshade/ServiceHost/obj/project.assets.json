@@ -2688,6 +2688,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "BlogManagement.Infrastructure.EFCore": "1.0.0",
           "DiscountManagement.Infrastructure.EFCore": "1.0.0",
           "InventoryManagement.Infrastructure.EfCore": "1.0.0",
           "ShopManagement.Infrastructure.EFCore": "1.0.0"
@@ -2746,6 +2747,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "01_LampshadeQuery": "1.0.0",
           "BlogManagement.Application": "1.0.0",
           "BlogManagement.Application.Contract": "1.0.0",
           "BlogManagement.Infrastructure.EFCore": "1.0.0",
@@ -9426,7 +9428,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

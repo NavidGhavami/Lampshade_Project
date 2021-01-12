@@ -48,6 +48,7 @@ body {
 .item-banner-Category .description {
     margin-bottom: 20px;
     max-width: 190px;
+    font-size: 15px;
 }
 
 .item-banner-Category a {
@@ -181,3 +182,6 @@ body {
     height: 100%
 }
 
+.main-info-post .TopPadding span {
+    padding-top: 350px;
+}

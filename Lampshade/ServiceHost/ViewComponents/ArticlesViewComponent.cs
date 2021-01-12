@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using _01_LampshadeQuery.Contracts.Article;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ServiceHost.ViewComponents
 {
     public class ArticlesViewComponent : ViewComponent
     {
+        private readonly IArticleQuery _articleQuery;
+
+        public ArticlesViewComponent(IArticleQuery articleQuery)
+        {
+            _articleQuery = articleQuery;
+        }
+
         public IViewComponentResult Invoke()
         {
-            return View();
+            var article = _articleQuery.LatestArticles();
+            return View(article);
         }
     }
 }

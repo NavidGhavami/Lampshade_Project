@@ -35,3 +35,9 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configurati
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\DiscountManagement.Application.Contract.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\DiscountManagement.Domain.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\BlogManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\BlogManagement.Infrastructure.EFCore.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\BlogManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\BlogManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\BlogManagement.Infrastructure.EFCore.pdb
