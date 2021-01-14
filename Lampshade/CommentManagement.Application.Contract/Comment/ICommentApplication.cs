@@ -9,5 +9,8 @@ namespace CommentManagement.Application.Contract.Comment
         OperationResult Confirm(long id);
         OperationResult Cancel(long id);
         List<CommentViewModel> Search(CommentSearchModel searchModel);
+        List<CommentViewModel> GetAllProductComments(int type);
+        List<CommentViewModel> GetAllArticleComments(int type);
+
     }
 }

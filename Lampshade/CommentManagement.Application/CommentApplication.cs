@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using _0_Framework.Application;
 using CommentManagement.Application.Contract.Comment;
 using CommentManagement.Domain.Comment;
@@ -61,6 +62,16 @@ namespace CommentManagement.Application
         public List<CommentViewModel> Search(CommentSearchModel searchModel)
         {
             return _commentRepository.Search(searchModel);
+        }
+
+        public List<CommentViewModel> GetAllProductComments(int type)
+        {
+            return _commentRepository.GetAllProductComments(type);
+        }
+
+        public List<CommentViewModel> GetAllArticleComments(int type)
+        {
+            return _commentRepository.GetAllArticleComments(type);
         }
     }
 }

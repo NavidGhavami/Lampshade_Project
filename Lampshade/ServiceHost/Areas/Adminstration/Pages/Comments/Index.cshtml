@@ -1,4 +1,5 @@
 ﻿@page
+@using CommentManagement.Infrastructure.EFCore
 @model ServiceHost.Areas.Adminstration.Pages.Comments.IndexModel
 @{
 }
@@ -32,6 +33,17 @@
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">جستجو</button>
                     <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">مشاهده همه</a>
+
+                    <a class="btn btn-purple waves-effect waves-light m-l-10"
+                       asp-page="./Index"
+                       asp-page-handler="ProductComment">
+                        مشاهده کامنت های محصولات
+                    </a>
+                    <a class="btn btn-info waves-effect waves-light m-l-10"
+                       asp-page="./Index"
+                       asp-page-handler="ArticleComment">
+                        مشاهده کامنت های مقالات
+                    </a>
                 </form>
             </div>
         </div>

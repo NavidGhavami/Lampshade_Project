@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using _01_LampshadeQuery.Contracts.Product;
 using CommentManagement.Application.Contract.Comment;
+using CommentManagement.Infrastructure.EFCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -11,6 +13,7 @@ namespace ServiceHost.Areas.Adminstration.Pages.Comments
         public string Message { get; set; }
 
         public List<CommentViewModel> comment;
+        public CommentViewModel Comments;
         public CommentSearchModel SearchModel;
 
         private readonly ICommentApplication _commentApplication;
@@ -27,8 +30,15 @@ namespace ServiceHost.Areas.Adminstration.Pages.Comments
 
             comment = _commentApplication.Search(searchModel);
         }
+        public void OnGetProductComment(int type = 1)
+        {
+            comment = _commentApplication.GetAllProductComments(type);
+        }
 
-        
+        public void OnGetArticleComment(int type = 2)
+        {
+            comment = _commentApplication.GetAllArticleComments(type);
+        }
 
         public IActionResult OnGetConfirm(long id)
         {

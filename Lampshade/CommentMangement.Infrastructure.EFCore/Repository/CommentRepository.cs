@@ -43,5 +43,46 @@ namespace CommentManagement.Infrastructure.EFCore.Repository
 
             return query.OrderByDescending(x => x.Id).ToList();
         }
+
+        public List<CommentViewModel> GetAllProductComments(int type)
+        {
+            var productComment = _commentContext.Comments
+                .Where(x => x.Type == type)
+                .Select(x => new CommentViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Email = x.Email,
+                    Website = x.Website,
+                    Message = x.Message,
+                    OwnerRecordId = x.OwnerRecordId,
+                    Type = x.Type,
+                    IsCanceled = x.IsCanceled,
+                    IsConfirmed = x.IsConfirmed,
+                    CreationDate = x.CreationDate.ToFarsi()
+                });
+            
+            return productComment.OrderByDescending(x => x.Id).ToList();
+        }
+
+        public List<CommentViewModel> GetAllArticleComments(int type)
+        {
+            var articleComment = _commentContext.Comments
+                .Where(x => x.Type == type)
+                .Select(x => new CommentViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Email = x.Email,
+                    Website = x.Website,
+                    Message = x.Message,
+                    OwnerRecordId = x.OwnerRecordId,
+                    Type = x.Type,
+                    IsCanceled = x.IsCanceled,
+                    IsConfirmed = x.IsConfirmed,
+                    CreationDate = x.CreationDate.ToFarsi()
+                });
+            return articleComment.OrderByDescending(x => x.Id).ToList();
+        }
     }
 }
