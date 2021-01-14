@@ -268,6 +268,33 @@
           "bin/placeholder/0_Framework.dll": {}
         }
       },
+      "CommentManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.Contract.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "CommentManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        }
+      },
       "ShopManagement.Application.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -791,6 +818,16 @@
       "path": "../0_Framework/0_Framework.csproj",
       "msbuildProject": "../0_Framework/0_Framework.csproj"
     },
+    "CommentManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application.Contract/CommentManagement.Application.Contract.csproj",
+      "msbuildProject": "../CommentManagement.Application.Contract/CommentManagement.Application.Contract.csproj"
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Domain/CommentManagement.Domain.csproj",
+      "msbuildProject": "../CommentManagement.Domain/CommentManagement.Domain.csproj"
+    },
     "ShopManagement.Application.Contract/1.0.0": {
       "type": "project",
       "path": "../ShopManagement.Application.Contract/ShopManagement.Application.Contract.csproj",
@@ -800,6 +837,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "0_Framework >= 1.0.0",
+      "CommentManagement.Domain >= 1.0.0",
       "ShopManagement.Application.Contract >= 1.0.0"
     ]
   },
@@ -839,6 +877,9 @@
           "projectReferences": {
             "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\0_Framework\\0_Framework.csproj": {
               "projectPath": "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\0_Framework\\0_Framework.csproj"
+            },
+            "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\CommentManagement.Domain\\CommentManagement.Domain.csproj": {
+              "projectPath": "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\CommentManagement.Domain\\CommentManagement.Domain.csproj"
             },
             "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj": {
               "projectPath": "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\ShopManagement.Application.Contract\\ShopManagement.Application.Contract.csproj"

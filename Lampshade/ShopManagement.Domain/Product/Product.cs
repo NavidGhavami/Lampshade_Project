@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _0_Framework;
+using CommentManagement.Domain.Comment;
 
 namespace ShopManagement.Domain.Product
 {
@@ -19,7 +20,6 @@ namespace ShopManagement.Domain.Product
         public long CategoryId { get; private set; }
         public ProductCategory.ProductCategory Category { get; private set; }
         public List<ProductPicture.ProductPicture> ProductPictures { get; private set; }
-        public List<Comment.Comment> Comments { get; private set; }
 
 
         public Product(string name, string code, string shortDescription,

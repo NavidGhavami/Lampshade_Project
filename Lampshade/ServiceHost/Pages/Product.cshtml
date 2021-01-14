@@ -148,7 +148,7 @@
             <a data-toggle="tab" aria-expanded="false" href="#information">مشخصات محصول </a>
         </li>
         <li class="">
-            <a data-toggle="tab" aria-expanded="false" href="#reviews">نظرات</a>
+            <a data-toggle="tab" aria-expanded="false" href="#reviews">نظرات: (@Model.Product.Comments.Count)</a>
         </li>
     </ul>
     <div class="tab-container">
@@ -173,10 +173,7 @@
                 </tr>
                 </tbody></table>
         </div>
-
         @await Component.InvokeAsync("Comment")
-
-
     </div>
 </div>
 <div style="clear: left;"></div>

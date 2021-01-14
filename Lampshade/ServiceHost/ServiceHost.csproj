@@ -7,6 +7,8 @@
   <ItemGroup>
     <ProjectReference Include="..\01_LampshadeQuery\01_LampshadeQuery.csproj" />
     <ProjectReference Include="..\BlogManagement.Configuration\BlogManagement.Configuration.csproj" />
+    <ProjectReference Include="..\CommentManagement.Application.Contract\CommentManagement.Application.Contract.csproj" />
+    <ProjectReference Include="..\CommentManagement.Cofiguration\CommentManagement.Configuration.csproj" />
     <ProjectReference Include="..\DiscountManagement.Configuration\DiscountManagement.Configuration.csproj" />
     <ProjectReference Include="..\InventoryManagement.Configuration\InventoryManagement.Configuration.csproj" />
     <ProjectReference Include="..\ShopManagement.Configuration\ShopManagement.Configuration.csproj" />

@@ -14,3 +14,7 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.csproj.CopyComplete
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\obj\Debug\netcoreapp3.1\ShopManagement.Application.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\CommentManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Application\bin\Debug\netcoreapp3.1\CommentManagement.Domain.pdb

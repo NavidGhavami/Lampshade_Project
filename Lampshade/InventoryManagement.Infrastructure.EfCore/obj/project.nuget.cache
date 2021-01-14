@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qSzcXlvCXEJUPm9PJXgYIUfabFfZoJLS4eqZUkXOF+CpfRJSvVQUElvXI6cetgR0+4DtyQj3CnztW2LX2R9QQA==",
+  "dgSpecHash": "DJ9t+qx0loAHRxK8pZthI0LmdjuDHDaB5fNWYvKlC4eLXwGE2InJO2yonuTUeEZzFi1xak0x/5GQ/tZcPQkVyA==",
   "success": true,
   "projectFilePath": "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\InventoryManagement.Infrastructure.EfCore\\InventoryManagement.Infrastructure.EfCore.csproj",
   "expectedPackageFiles": [

@@ -23,3 +23,7 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infras
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\obj\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.EfCore.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\obj\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.EfCore.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\obj\Debug\netcoreapp3.1\InventoryManagement.Infrastructure.EfCore.genruntimeconfig.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\CommentManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\CommentManagement.Domain.pdb

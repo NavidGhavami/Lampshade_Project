@@ -1,5 +1,8 @@
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 using _0_Framework.Application;
 using BlogManagement.Configuration;
+using CommentManagement.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,7 +32,10 @@ namespace ServiceHost
             DiscountManagementBootStrapper.Configure(services, connectionString);
             InventoryManagementBootstrapper.Configure(services, connectionString);
             BlogManagementBootstrapper.Configure(services, connectionString);
+            CommentManagementBootstrapper.Configure(services,connectionString);
 
+
+            services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
 
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages();

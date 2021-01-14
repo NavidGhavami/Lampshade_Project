@@ -24,3 +24,7 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Configu
 F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Configuration\obj\Debug\netcoreapp3.1\DiscountManagement.Configuration.csproj.CopyComplete
 F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Configuration\obj\Debug\netcoreapp3.1\DiscountManagement.Configuration.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Configuration\obj\Debug\netcoreapp3.1\DiscountManagement.Configuration.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Domain.pdb

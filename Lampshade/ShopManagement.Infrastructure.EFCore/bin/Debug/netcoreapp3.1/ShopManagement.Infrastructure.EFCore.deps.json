@@ -9,6 +9,7 @@
       "ShopManagement.Infrastructure.EFCore/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.1",
+          "Microsoft.EntityFrameworkCore.Design": "5.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.1",
           "ShopManagement.Domain": "1.0.0"
@@ -1162,6 +1163,23 @@
           "0_Framework.dll": {}
         }
       },
+      "CommentManagement.Application.Contract/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "runtime": {
+          "CommentManagement.Application.Contract.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "CommentManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "CommentManagement.Domain.dll": {}
+        }
+      },
       "ShopManagement.Application.Contract/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
@@ -1174,6 +1192,7 @@
       "ShopManagement.Domain/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
+          "CommentManagement.Domain": "1.0.0",
           "ShopManagement.Application.Contract": "1.0.0"
         },
         "runtime": {
@@ -1924,6 +1943,16 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "0_Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommentManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommentManagement.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

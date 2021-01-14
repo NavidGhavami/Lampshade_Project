@@ -23,3 +23,7 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Infrast
 F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Infrastructure.EFCore\obj\Debug\netcoreapp3.1\DiscountManagement.Infrastructure.EFCore.genruntimeconfig.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\CommentManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\DiscountManagement.Infrastructure.EFCore\bin\Debug\netcoreapp3.1\CommentManagement.Domain.pdb

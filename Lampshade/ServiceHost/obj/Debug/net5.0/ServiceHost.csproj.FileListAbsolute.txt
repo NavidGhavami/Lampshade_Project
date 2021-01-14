@@ -218,7 +218,6 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\System.IO.Pipelines.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs
-F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Shop\Comments\Index.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Comment\Default.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ProductDiscount\Default.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\BigBanner\Default.cshtml.g.cs
@@ -244,3 +243,14 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\ArticleDetails.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\PopularArticles\Default.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\ArticleCategories.cshtml.g.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Configuration.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Configuration.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.EFCore.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Comments\Index.cshtml.g.cs
