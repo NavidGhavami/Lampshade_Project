@@ -1,0 +1,16 @@
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\AccountManagement.Application.deps.json
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\AccountManagement.Application.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\AccountManagement.Application.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\obj\Debug\netcoreapp3.1\AccountManagement.Application.csprojAssemblyReference.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\obj\Debug\netcoreapp3.1\AccountManagement.Application.AssemblyInfoInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\obj\Debug\netcoreapp3.1\AccountManagement.Application.AssemblyInfo.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\obj\Debug\netcoreapp3.1\AccountManagement.Application.csproj.CoreCompileInputs.cache
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\obj\Debug\netcoreapp3.1\AccountManagement.Application.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\obj\Debug\netcoreapp3.1\AccountManagement.Application.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\0_Framework.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\AccountManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\AccountManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\bin\Debug\netcoreapp3.1\0_Framework.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\AccountManagement.Application\obj\Debug\netcoreapp3.1\AccountManagement.Application.csproj.CopyComplete

@@ -8,7 +8,7 @@ namespace CommentManagement.Infrastructure.EFCore
     {
         public DbSet<Comment> Comments { get; set; }
 
-        public CommentContext(DbContextOptions options) : base(options)
+        public CommentContext(DbContextOptions<CommentContext> options) : base(options)
         {
         }
 
