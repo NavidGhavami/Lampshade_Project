@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AccountManagement.Infrastructure.EFCore.Migrations
 {
     [DbContext(typeof(AccountContext))]
-    [Migration("20210115132509_CreateAccountManagement")]
-    partial class CreateAccountManagement
+    [Migration("20210118123320_CreateAccountAndRoleAgain")]
+    partial class CreateAccountAndRoleAgain
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,18 +32,22 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FullName")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Mobile")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("ProfilePhoto")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -51,12 +55,51 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("Username")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RoleId");
+
                     b.ToTable("Accounts");
+                });
+
+            modelBuilder.Entity("AccountManagement.Domain.Role.Role", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("AccountManagement.Domain.AccountAgg.Account", b =>
+                {
+                    b.HasOne("AccountManagement.Domain.Role.Role", "Role")
+                        .WithMany("Accounts")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("AccountManagement.Domain.Role.Role", b =>
+                {
+                    b.Navigation("Accounts");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,7 @@
-﻿@model _01_LampshadeQuery.MenuModel
+﻿
+@using _0_Framework.Application
+@inject IAuthHelper AuthHelper
+@model _01_LampshadeQuery.MenuModel
 
 
 @{
@@ -62,9 +65,15 @@
                         <li class="menu-item">
                             <a asp-page="/About" class="cleric-menu-item-title" title="About">درباره ما</a>
                         </li>
-                        <li class="menu-item">
+                        <li class="menu-item ">
                             <a asp-page="/Contact" class="cleric-menu-item-title" title="Contact">تماس با ما</a>
                         </li>
+                       @if (AuthHelper.IsAuthenticated())
+                       {
+                           <li class="menu-item ">
+                               <a asp-page="/Account" asp-page-handler="Logout" class="cleric-menu-item-title" title="خروج">خروج</a>
+                           </li>
+                       }
                     </ul>
                 </div>
             </div>
@@ -149,13 +158,28 @@
                 <span class="text">سبد خرید</span>
             </a>
         </div>
-        <div class="footer-device-mobile-item device-home device-user">
-            <a href="login.html">
-                <span class="icon">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                </span>
-                ورود | ثبت نام
-            </a>
-        </div>
+        @if (AuthHelper.IsAuthenticated())
+        {
+            <div class="footer-device-mobile-item device-home device-user">
+                <a asp-page="/Account" asp-page-handler="Logout">
+                    <span class="icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                    خوش آمدید
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="footer-device-mobile-item device-home device-user">
+                <a asp-page="/Account">
+                    <span class="icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                    ورود | ثبت نام
+                </a>
+            </div>
+        }
+        
     </div>
 </div>

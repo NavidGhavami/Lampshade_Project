@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using _0_Framework.Application
+
+@inject IAuthHelper AuthHelper;
+
+<!DOCTYPE html>
 <html lang="fa">
 
 <!-- Mirrored from ledthanhdat.vn/html/cleric/home3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Dec 2020 09:52:32 GMT -->
 <head>
-    <title>@ViewData["Title"]</title>
+    <title>@ViewData["Title"] | فروشگاه دکومال</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,18 +36,16 @@
 <header class="header style7">
     <div class="top-bar">
         <div class="container">
-            <div class="top-bar-left">
-                <div class="header-message">
-                    به سایت فروشگاهی آنلاین دکومال خوش آمدید 
-                </div>
-            </div>
             <div class="top-bar-right">
                 <ul class="header-user-links">
+                   
                     <li>
-                        <a href="">ورود</a>
-                        <span>|</span>
-                        <a href="">ثبت نام</a>
+                        <a asp-page="/Index">@DateTime.Now.ToFarsi()</a>
+                        <span>---</span>
+                        <a asp-page="/Index">به سایت فروشگاهی آنلاین دکومال خوش آمدید </a>
+
                     </li>
+                   
                 </ul>
             </div>
         </div>
@@ -93,29 +95,40 @@
                             </a>
                             <div class="header-account cleric-submenu">
                                 <div class="header-user-form-tabs">
-                                    <ul class="tab-link">
-                                        <li class="active">
-                                            <a data-toggle="tab" aria-expanded="true" href="#header-tab-login">ورود</a>
-                                        </li>
-                                        <li>
-                                            <a data-toggle="tab" aria-expanded="true" href="#header-tab-rigister">ثبت نام</a>
-                                        </li>
-                                    </ul>
+                                   
                                     <div class="tab-container">
-                                        <div id="header-tab-login" class="tab-panel active">
-                                            <form method="post" class="login form-login">
+                                        @if (AuthHelper.IsAuthenticated())
+                                        {
+                                            <ul class="tab-link">
+                                                <li class="active">
+                                                    <a data-toggle="tab" aria-expanded="true" >@AuthHelper.CurrentAccountInfo().FullName عزیز خوش آمدید</a>
+                                                </li>
+                                            </ul>
+                                        }
+                                        else
+                                        {
+                                            <ul class="tab-link">
+                                                <li class="active">
+                                                    <a data-toggle="tab" aria-expanded="true" href="#header-tab-login">ورود</a>
+                                                </li>
+                                                <li>
+                                                    <a data-toggle="tab" aria-expanded="true" href="#header-tab-rigister">ثبت نام</a>
+                                                </li>
+                                            </ul>
+                                            <div id="header-tab-login" class="tab-panel active">
+                                            <form method="post" asp-page="/Account" asp-page-handler="Login" class="login form-login">
                                                 <p class="form-row form-row-wide">
-                                                    <input type="email" placeholder="ایمیل" class="input-text">
+                                                    <input type="text" name="username" placeholder="نام کاربری" class="input-text">
                                                 </p>
                                                 <p class="form-row form-row-wide">
-                                                    <input type="password" class="input-text" placeholder="کلمه عبور">
+                                                    <input type="password" name="password" class="input-text" placeholder="کلمه عبور">
                                                 </p>
                                                 <p class="form-row">
                                                     <label class="form-checkbox">
                                                         <input type="checkbox" class="input-checkbox">
                                                         <span>
-																مرا به خاطر بسپار
-															</span>
+                                                            مرا به خاطر بسپار
+                                                        </span>
                                                     </label>
                                                     <input type="submit" class="button" value="ورود">
                                                 </p>
@@ -125,18 +138,32 @@
                                             </form>
                                         </div>
                                         <div id="header-tab-rigister" class="tab-panel">
-                                            <form method="post" class="register form-register">
+                                            <form method="post"  asp-page="/Account" asp-page-handler="Register" class="register form-register">
                                                 <p class="form-row form-row-wide">
-                                                    <input type="email" placeholder="ایمیل" class="input-text">
+                                                    <input type="text" name="fullname" placeholder="نام و نام خانوادگی" class="input-text">
                                                 </p>
                                                 <p class="form-row form-row-wide">
-                                                    <input type="password" class="input-text" placeholder="کلمه عبور">
+                                                    <input type="text" name="username" placeholder="نام کاربری" class="input-text">
+                                                </p>
+                                                <p class="form-row form-row-wide">
+                                                    <input type="email" name="email" placeholder="ایمیل" class="input-text">
+                                                </p>
+                                                <p class="form-row form-row-wide">
+                                                    <input type="text" name="mobile" placeholder="موبایل" class="input-text">
+                                                </p>
+                                                <p class="form-row form-row-wide">
+                                                    <input type="password" name="password" class="input-text" placeholder="کلمه عبور">
+                                                </p>
+                                                <p class="form-row form-row-wide">
+                                                    <input type="password" name="repassword" class="input-text" placeholder="تکرار کلمه عبور">
                                                 </p>
                                                 <p class="form-row">
                                                     <input type="submit" class="button" value="ثبت نام">
                                                 </p>
                                             </form>
                                         </div>
+                                        }
+                                        
                                     </div>
                                 </div>
                             </div>

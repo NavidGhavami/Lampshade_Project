@@ -272,3 +272,5 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Accounts\Roles\Create.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Accounts\Roles\Edit.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Accounts\Roles\Index.cshtml.g.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Account.cshtml.g.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\AccessDenied.cshtml.g.cs

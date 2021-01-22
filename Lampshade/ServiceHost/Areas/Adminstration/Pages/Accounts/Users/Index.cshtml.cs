@@ -34,7 +34,7 @@ namespace ServiceHost.Areas.Adminstration.Pages.Accounts.Users
 
         public IActionResult OnGetCreate()
         {
-            var command = new CreateAccount()
+            var command = new RegisterAccount()
             {
             Roles = _roleApplication.List()
                 
@@ -43,9 +43,9 @@ namespace ServiceHost.Areas.Adminstration.Pages.Accounts.Users
             return Partial("./Create", command);
         }
 
-        public JsonResult OnPostCreate(CreateAccount command)
+        public JsonResult OnPostCreate(RegisterAccount command)
         {
-            var result = _accountApplication.Create(command);
+            var result = _accountApplication.Register(command);
 
             return new JsonResult(result);
         }

@@ -1,0 +1,40 @@
+﻿@page
+@model ServiceHost.Pages.AccessDeniedModel
+@{
+}
+
+<div class="main-content main-content-404 right-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="content-area content-404 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="site-main">
+                    <section class="error-404 not-found">
+                        <div class="images">
+                            <img src="~/Theme/assets/images/404.png" alt="صفحه مورد نظر پیدا نشد. متاسفیم">
+                        </div>
+                        <div class="text-404">
+                            <h1 class="page-title">
+                                شما اجازه دسترسی به این مسیر را ندارید
+                            </h1>
+                            <br/>
+                            <p class="page-content RightDirection">
+                                خیلی متاسفیم. شما اجازه ورود به این بخش را ندارید. <br/><br/>
+                                لطفا به صفحه اصلی سایت از طریق کلیک بر روی صفحه اصلی برگردید.
+                                
+                                <a asp-page="/Index" class="hightlight">صفحه اصلی</a>
+                                یا عنوان مورد نظرتان را جستجو  نمایید
+                                <span class="hightlight toggle-hightlight">
+                                    
+                                </span>
+                            </p>
+                            <form asp-page="/Search" role="search" method="get" class="search-form">
+                                <input type="search" name="value" class="search-field" placeholder="دنبال چی می گردی">
+                                <button>جستجو</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
