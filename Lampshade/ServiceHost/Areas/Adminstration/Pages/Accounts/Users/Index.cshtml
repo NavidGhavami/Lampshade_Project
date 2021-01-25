@@ -1,4 +1,5 @@
 ﻿@page
+@using AccountManagement.Configuration.Permissions
 @model ServiceHost.Areas.Adminstration.Pages.Accounts.Users.IndexModel
 @{
 }
@@ -13,7 +14,7 @@
     <div class="col-sm-12">
         <h4 class="page-title pull-right">@ViewData["Title"]</h4>
         <p class="pull-left">
-            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد کاربر جدید</a>
+            <a permission="@AccountPermission.CreateAccount" class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد کاربر جدید</a>
         </p>
     </div>
 </div>
@@ -90,13 +91,13 @@
                                         <td>@item.Role</td>
                                         <td>@item.CreationDate</td>
                                         <td>
-                                            <a class="btn btn-warning btn-rounded waves-effect waves-light text-dark m-b-5" 
+                                            <a permission="@AccountPermission.EditAccount" class="btn btn-warning btn-rounded waves-effect waves-light text-dark m-b-5" 
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
                                         
                                         
-                                            <a class="btn btn-purple btn-rounded waves-effect waves-light text-light m-b-5" 
+                                            <a permission="@AccountPermission.ChangePasswordAccount" class="btn btn-purple btn-rounded waves-effect waves-light text-light m-b-5" 
                                                href="#showmodal=@Url.Page("./Index", "ChangePassword", new { id = item.Id})">
                                                 <i class="fa fa-key"></i> تغییر کلمه عبور
                                             </a>

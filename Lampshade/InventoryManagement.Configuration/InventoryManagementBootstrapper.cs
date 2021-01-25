@@ -1,5 +1,7 @@
-﻿using InventoryManagement.Application;
+﻿using _0_Framework.Infrastructure;
+using InventoryManagement.Application;
 using InventoryManagement.Application.Contract.Inventory;
+using InventoryManagement.Configuration.Permissions;
 using InventoryManagement.Domain.InventoryAgg;
 using InventoryManagement.Infrastructure.EfCore;
 using InventoryManagement.Infrastructure.EfCore.Repository;
@@ -15,6 +17,8 @@ namespace InventoryManagement.Configuration
         {
             services.AddTransient<IInventoryRepository, InventoryRepository>();
             services.AddTransient<IInventoryApplication, InventoryApplication>();
+
+            services.AddTransient<IPermissionExposition, InventoryPermissionExposition>();
 
 
 

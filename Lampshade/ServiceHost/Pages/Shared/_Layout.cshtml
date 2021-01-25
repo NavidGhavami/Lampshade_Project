@@ -1,4 +1,5 @@
 ﻿@using _0_Framework.Application
+@using _0_Framework.Infrastructure
 
 @inject IAuthHelper AuthHelper;
 
@@ -36,16 +37,31 @@
 <header class="header style7">
     <div class="top-bar">
         <div class="container">
+            @if (AuthHelper.CurrentAccountRole() == Roles.Administrator ||
+                 AuthHelper.CurrentAccountRole() == Roles.ContentUploader ||
+                 AuthHelper.CurrentAccountRole() == Roles.AdminAssistant)
+            {
+                <div class="top-bar-left">
+                    <ul class="header-user-links">
+
+                        <li>
+                            <a asp-page="/Index" asp-area="Adminstration">مدیریت وبسایت</a>
+
+                        </li>
+
+                    </ul>
+                </div>
+            }
             <div class="top-bar-right">
                 <ul class="header-user-links">
-                   
+
                     <li>
                         <a asp-page="/Index">@DateTime.Now.ToFarsi()</a>
                         <span>---</span>
                         <a asp-page="/Index">به سایت فروشگاهی آنلاین دکومال خوش آمدید </a>
 
                     </li>
-                   
+
                 </ul>
             </div>
         </div>
