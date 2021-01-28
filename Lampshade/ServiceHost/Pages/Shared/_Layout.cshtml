@@ -95,15 +95,14 @@
                         <div class="block-minicart cleric-mini-cart block-header cleric-dropdown">
                             <a href="javascript:void(0);" class="shopcart-icon" data-cleric="cleric-dropdown">
                                 سبد خرید
-                                <span class="count">
+                                <span class="count" id="cart_items_count">
 									0
 									</span>
                             </a>
-                            <div class="no-product cleric-submenu">
-                                <p class="text">
-                                  سبد خرید شما خالی می باشد
-                                </p>
+                            <div class="no-product cleric-submenu" id="cart_items_wrapper">
+                               
                             </div>
+                           
                         </div>
                         <div class="block-account block-header cleric-dropdown">
                             <a href="javascript:void(0);" data-cleric="cleric-dropdown">
@@ -242,6 +241,17 @@
 <script src="~/Theme/assets/js/jquery.scrollbar.min.js"></script>
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
 <script src="~/Theme/assets/js/frontend-plugin.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/Theme/assets/js/plugins.js"></script>
+<script src="~/Theme/assets/js/Custom.js"></script>
+
+<script>
+    $(document).ready(function() {
+        updateCart();
+    });
+</script>
+
+
 </body>
 
 <!-- Mirrored from ledthanhdat.vn/html/cleric/home3.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Dec 2020 09:52:33 GMT -->

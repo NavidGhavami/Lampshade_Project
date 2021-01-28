@@ -8,6 +8,7 @@ namespace _0_Framework.Infrastructure
         public const string UserSystem = "2";
         public const string ContentUploader = "3";
         public const string AdminAssistant = "4";
+        public const string ColleagueUser = "5";
 
         public static string GetRoleBy(long id)
         {

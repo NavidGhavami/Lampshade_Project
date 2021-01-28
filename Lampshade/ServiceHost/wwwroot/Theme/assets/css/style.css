@@ -5765,7 +5765,7 @@ ul.list-products {
 .shop_table .actions .coupon .button::after {
     content: '\f061';
     display: inline-block;
-    font-family: 'FontAwesome';
+    font-family: 'IranianSans';
     font-size: 14px;
 }
 
@@ -5788,15 +5788,15 @@ ul.list-products {
     margin-top: 30px;
 }
 
-    .shoppingcart-content .control-cart .button {
+    .shoppingcart-content .control-cart .a {
         background: transparent;
         color: #333333;
         border: 1px solid #e9e9e9;
         margin-left: 15px;
     }
 
-        .shoppingcart-content .control-cart .button:hover {
-            color: #ffffff;
+        .shoppingcart-content .control-cart .a:hover {
+            color: #d27d53;
         }
 /*about page*/
 /*banner about*/

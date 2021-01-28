@@ -1,0 +1,138 @@
+﻿@page
+@using _0_Framework.Application
+@model ServiceHost.Pages.CheckoutModel
+@{
+    ViewData["Title"] = "تکمیل فرایند خرید";
+}
+
+<main class="site-main  main-container no-sidebar">
+    <div class="container">
+        <div class="breadcrumb-trail breadcrumbs">
+            <ul class="trail-items breadcrumb">
+                <li class="trail-item trail-begin">
+                    <a asp-page="/Index">
+                        <span>
+                            صفحه اصلی
+                        </span>
+                    </a>
+                </li>
+                <li class="trail-item trail-end active">
+                    <span>
+                        تایید سبد خرید و پرداخت
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="main-content-cart main-content col-sm-12">
+                <h3 class="custom_blog_title RightDirection">
+                    تایید سبد خرید و پرداخت
+                </h3>
+                <div class="page-main-content">
+                    <div class="shoppingcart-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!--=======  page wrapper  =======-->
+                                    <div class="page-wrapper" style="margin-top: 0">
+                                        <div class="page-content-wrapper">
+                                            <form action="#">
+                                                <div class="cart-table table-responsive">
+                                                    <table class="table RightDirection">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="pro-thumbnail">عکس</th>
+                                                                <th class="pro-thumbnail">محصول</th>
+                                                                <th class="pro-title">قیمت واحد</th>
+                                                                <th class="pro-price">تعداد</th>
+                                                                <th class="pro-quantity">مبلغ کل بدون تخفیف</th>
+                                                                <th class="pro-remove">درصد تخفیف</th>
+                                                                <th class="pro-subtotal">مبلغ کل تخفیف</th>
+                                                                <th class="pro-remove">مبلغ پس از تخفیف</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                           @foreach (var item in Model.Cart.Items)
+                                                           {
+                                                                <tr>
+                                                                <td class="pro-thumbnail">
+                                                                    <a>
+                                                                        <img src="~/ProductPicture/@item.Picture" class="img-fluid" alt="@item.Name">
+                                                                    </a>
+                                                                </td>
+                                                                <td class="pro-title">
+                                                                    <a>
+                                                                        @item.Name
+                                                                    </a>
+                                                                </td>
+                                                                <td class="pro-price">
+                                                                    <span>@item.UnitPrice.ToMoney() تومان</span>
+                                                                </td>
+                                                                <td class="pro-price">
+                                                                    <span>@item.Count</span>
+                                                                </td>
+                                                                <td class="pro-subtotal">
+                                                                    <span>@item.TotalItemPrice.ToMoney() تومان</span>
+                                                                </td>
+                                                                <td class="pro-subtotal">
+                                                                    <span>@item.DiscountRate %</span>
+                                                                </td>
+                                                                <td class="pro-subtotal">
+                                                                    <span>@item.DiscountAmount.ToMoney() تومان</span>
+                                                                </td>
+                                                                <td class="pro-subtotal">
+                                                                    <span>@item.ItemPayAmount.ToMoney() تومان</span>
+                                                                </td>
+                                                            </tr>
+                                                           }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </form>
+                                            <h3 class="custom_blog_title RightDirection">
+                                                خلاصه وضعیت فاکتور
+                                            </h3>
+                                            <div class="cart-table table-responsive">
+                                                <form>
+                                                    <table class="table RightDirection">
+                                                        <thead>
+                                                        <tr>
+                                                            <th class="pro-title">مبلغ نهایی</th>
+                                                            <th class="pro-title">مبلغ تخفیف</th>
+                                                            <th class="pro-price">مبلغ قابل پرداخت</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="pro-price">
+                                                                <span>@Model.Cart.TotalAmount.ToMoney() تومان</span>
+                                                            </td>
+                                                            <td class="pro-price">
+                                                                <span>@Model.Cart.DiscountAmount.ToMoney() تومان</span>
+                                                            </td>
+                                                            <td class="pro-price">
+                                                                <span>@Model.Cart.PayAmount.ToMoney() تومان</span>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </form>
+                                            </div>
+
+                                            <div class="control-cart CheckoutButton">
+                                                <a  class="btn btn-purple btn-rounded">
+                                                    پرداخت و تایید نهایی
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,109 @@
+﻿@page
+@using _0_Framework.Application
+@using ShopManagement.Application.Contract.Order
+@model ServiceHost.Pages.ShoppingCartModel
+
+
+@{
+    ViewData["Title"] = "لیست سبد خرید";
+}
+<div class="site-content">
+    <main class="site-main  main-container no-sidebar">
+        <div class="container">
+            <div class="breadcrumb-trail breadcrumbs">
+                <ul class="trail-items breadcrumb">
+                    <li class="trail-item trail-begin">
+                        <a asp-page="/Index">
+								<span>
+									صفحه اصلی
+								</span>
+                        </a>
+                    </li>
+                    <li class="trail-item trail-end active">
+							<span>
+								لیست سبد خرید
+							</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="main-content-cart main-content col-sm-12">
+                    <h3 class="custom_blog_title RightDirection">
+                        لیست سبد خرید شما
+                    </h3>
+                    @foreach (var item in Model.CartItems.Where(x => !x.IsInStock))
+                    {
+                        <div class="alert alert-danger RightDirection"><i class="fa fa-warning"></i>
+                            
+
+                                کالای <strong> @item.Name</strong> در انبار،  کمتر از تعداد درخواستی موجود می باشد
+
+                            </div>
+                    }
+                    
+                    <div class="page-main-content">
+                        <div class="shoppingcart-content">
+                            <form action="" class="cart-form">
+                                <table class="shop_table">
+                                    <thead>
+                                    <tr>
+                                        <th class="product-remove"></th>
+                                        <th class="product-thumbnail"></th>
+                                        <th class="product-name"></th>
+                                        <th class="product-price"></th>
+                                        <th class="product-quantity"></th>
+                                        <th class="product-subtotal"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach (var item in Model.CartItems)
+                                    {
+                                        <tr class="cart_item">
+                                        <td class="product-remove">
+                                            <a onclick="removeFromCart(@item.Id)" class="remove"></a>
+                                        </td>
+                                        <td class="product-thumbnail">
+                                            <a href="#">
+                                                <img src="~/ProductPicture/@item.Picture" alt="@item.Name" title="@item.Name" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image">
+                                            </a>
+                                        </td>
+                                            <td class="product-name" data-title="Product">
+                                                <a href="#" class="title">@item.Name</a>
+                                                <span class="attributes-select attributes-color">@item.UnitPrice.ToMoney() تومان</span>
+                                            </td>
+                                            <td class="product-quantity" data-title="Quantity">
+                                            <div class="quantity">
+                                                <div class="control">
+                                                    <a class="btn-number qtyminus quantity-minus" href="#">-</a>
+                                                    <input type="text" data-step="1" data-min="1" value="@item.Count" 
+                                                           onchange="changeCartItemCount('@item.Id','totalItemPrice-@item.Id',this.value)"
+                                                           title="Qty" class="input-qty qty" size="4">
+                                                    <a href="#" class="btn-number qtyplus quantity-plus">+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                            <td class="product-price" data-title="Price">
+                                                <span id ="totalItemPrice-@item.Id"  class="woocommerce-Price-amount amount">
+                                                    <span class="woocommerce-Price-currencySymbol">
+                                                        تومان
+                                                    </span>
+                                                    @item.TotalItemPrice.ToMoney()
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    }
+                                    </tbody>
+                                </table>
+                            </form>
+                            <div class="control-cart CheckoutButton">
+                                <a  asp-page-handler="GoToCheckout" class="btn btn-purple btn-rounded">
+                                    ادامه فرایند خرید
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

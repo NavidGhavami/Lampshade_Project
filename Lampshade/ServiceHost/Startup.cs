@@ -3,6 +3,8 @@ using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using _01_LampshadeQuery.Contracts.Cart;
+using _01_LampshadeQuery.Query;
 using AccountManagement.Configuration;
 using BlogManagement.Configuration;
 using CommentManagement.Configuration;

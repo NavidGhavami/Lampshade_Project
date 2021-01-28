@@ -130,11 +130,12 @@
                 <div class="quantity">
                     <div class="control">
                         <a class="btn-number qtyminus quantity-minus" href="#">-</a>
-                        <input type="text" data-step="1" data-min="0" value="1" title="Qty" class="input-qty qty" size="4">
+                        <input type="text" id="productCount" data-step="1" data-min="0" value="1" title="Qty" class="input-qty qty" size="4">
                         <a href="#" class="btn-number qtyplus quantity-plus">+</a>
                     </div>
                 </div>
-                <button class="single_add_to_cart_button button">افزودن به سبد خرید</button>
+                <button onclick="addToCart('@Model.Product.Id','@Model.Product.Name','@Model.Product.DoublePrice','@Model.Product.Picture')"
+                        class="single_add_to_cart_button button">افزودن به سبد خرید</button>
             </div>
         </div>
     </div>
