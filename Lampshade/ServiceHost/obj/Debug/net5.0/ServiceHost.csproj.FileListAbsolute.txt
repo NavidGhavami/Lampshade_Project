@@ -191,7 +191,6 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Discount\ColleagueDiscount\Create.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Discount\ColleagueDiscount\Edit.cshtml.g.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Discount\ColleagueDiscount\Index.cshtml.g.cs
-F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Configuration.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.dll
@@ -280,3 +279,9 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\Nancy.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\Checkout.cshtml.g.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\RestSharp.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Pages\PaymentResult.cshtml.g.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.InventoryAcl.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Shop\Orders\Index.cshtml.g.cs
+F:\Programming\Codes and projects\Lampshade\Lampshade\ServiceHost\obj\Debug\net5.0\Razor\Areas\Adminstration\Pages\Shop\Orders\Items.cshtml.g.cs

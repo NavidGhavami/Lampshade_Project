@@ -1,0 +1,47 @@
+﻿@page
+@model ServiceHost.Pages.PaymentResultModel
+@{
+    ViewData["Title"] = "نتیجه پرداخت";
+}
+
+<br/>
+<br/>
+<div class="site-content">
+    <main class="site-main  main-container no-sidebar">
+        <div class="container">
+            <div class="row RightDirection">
+                <div class="main-content-cart main-content col-sm-12">
+                    <h3 class="custom_blog_title RightDirection">
+                        نتیجه پرداخت
+                    </h3>
+                    
+                    @if (Model.Result.IsSuccessful)
+                    {
+                        <div class="alert alert-success">
+                        
+                            <p>
+                                @Model.Result.Message
+                            </p>
+                            <p>
+                                شماره پیگیری : <strong> @Model.Result.IssueTrackingNo</strong>
+                            </p>
+
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-danger">
+                        
+                            <p>
+                                @Model.Result.Message
+                            </p>
+
+                        </div>
+                    }
+                    
+
+                    </div>
+            </div>
+        </div>
+    </main>
+</div>

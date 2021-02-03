@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hjE5q7l73DjTe6GzP8By7x4zZ5RyCgD/BWhyRhc3hbwIyTAkrJiAhQjFCpG5UEFixA+ScaLwcec0ee6wQ23IHA==",
+  "dgSpecHash": "+7VE8U4ui3GWpilYWHmL9B2WKVW9TtnUjxOxSY269WY9Hr+PqCAmWJ2jkAtJxydoeO2UR1PWK/wIQHZVbiPsiA==",
   "success": true,
   "projectFilePath": "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\DiscountManagementApplication\\DiscountManagement.Application.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Diyar10\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\Diyar10\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",

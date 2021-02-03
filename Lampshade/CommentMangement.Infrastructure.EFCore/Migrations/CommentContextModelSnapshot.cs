@@ -17,7 +17,7 @@ namespace CommentManagement.Infrastructure.EFCore.Migrations
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.1");
+                .HasAnnotation("ProductVersion", "5.0.2");
 
             modelBuilder.Entity("CommentManagement.Domain.Comment.Comment", b =>
                 {

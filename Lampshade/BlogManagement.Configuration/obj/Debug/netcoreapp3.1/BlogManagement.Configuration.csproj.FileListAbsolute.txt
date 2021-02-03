@@ -44,3 +44,9 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configurati
 F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Domain.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Infrastructure.EFCore.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Infrastructure.EFCore.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Infrastructure.EFCore.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\BlogManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Infrastructure.EFCore.pdb

@@ -11,8 +11,6 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configurati
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\obj\Debug\netcoreapp3.1\ShopManagement.Configuration.AssemblyInfoInputs.cache
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\obj\Debug\netcoreapp3.1\ShopManagement.Configuration.AssemblyInfo.cs
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\ShopManagement.Configuration.deps.json
-F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\ShopManagement.Configuration.runtimeconfig.json
-F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\ShopManagement.Configuration.runtimeconfig.dev.json
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\ShopManagement.Configuration.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\ShopManagement.Configuration.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.EFCore.pdb
@@ -20,7 +18,6 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configurati
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\obj\Debug\netcoreapp3.1\ShopManagement.Configuration.csproj.CopyComplete
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\obj\Debug\netcoreapp3.1\ShopManagement.Configuration.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\obj\Debug\netcoreapp3.1\ShopManagement.Configuration.pdb
-F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\obj\Debug\netcoreapp3.1\ShopManagement.Configuration.genruntimeconfig.cache
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\01_LampshadeQuery.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\01_LampshadeQuery.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\InventoryManagement.Application.Contract.dll
@@ -49,3 +46,13 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configurati
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Application.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Domain.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\CommentManagement.Infrastructure.EFCore.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\InventoryManagement.Application.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.InventoryAcl.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\ShopManagement.Infrastructure.InventoryAcl.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\InventoryManagement.Application.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Infrastructure.EFCore.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\ShopManagement.Configuration\bin\Debug\netcoreapp3.1\AccountManagement.Infrastructure.EFCore.pdb

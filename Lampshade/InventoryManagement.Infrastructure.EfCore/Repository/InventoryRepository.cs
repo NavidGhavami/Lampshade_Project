@@ -2,6 +2,7 @@
 using System.Linq;
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using AccountManagement.Infrastructure.EFCore;
 using InventoryManagement.Application.Contract.Inventory;
 using InventoryManagement.Domain.InventoryAgg;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +14,12 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
     {
         private readonly ShopContext _shopContext;
         private readonly InventoryContext _context;
-        public InventoryRepository(InventoryContext context, ShopContext shopContext) : base(context)
+        private readonly AccountContext _accountContext;
+        public InventoryRepository(InventoryContext context, ShopContext shopContext, AccountContext accountContext) : base(context)
         {
             _context = context;
             _shopContext = shopContext;
+            _accountContext = accountContext;
         }
 
         public Inventory GetBy(long productId)
@@ -68,8 +71,9 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
 
         public List<InventoryOperationViewModel> GetOperationLog(long inventoryId)
         {
+            var account = _accountContext.Accounts.Select(x => new {x.Id, x.FullName}).ToList();
             var inventory = _context.Inventories.FirstOrDefault(x => x.Id == inventoryId);
-            return inventory.Operations.Select(x => new InventoryOperationViewModel
+            var operations = inventory.Operations.Select(x => new InventoryOperationViewModel
             {
                 Id = x.Id,
                 Count = x.Count,
@@ -79,9 +83,15 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 Operation = x.Operation,
                 OperationDate = x.OperationDate.ToFarsi(),
                 OperatorId = x.OperatorId,
-                Operator = "مدیر سیستم"
 
             }).OrderByDescending(x=>x.Id).ToList();
+
+            foreach (var operation in operations)
+            {
+                operation.Operator = account.FirstOrDefault(x => x.Id == operation.OperatorId)?.FullName;
+            }
+
+            return operations;
         }
     }
 }

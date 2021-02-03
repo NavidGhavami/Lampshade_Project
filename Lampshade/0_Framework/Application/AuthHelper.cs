@@ -81,6 +81,7 @@ namespace _0_Framework.Application
             result.Role = Roles.GetRoleBy(result.RoleId);
             result.Picture = claims.FirstOrDefault(x => x.Type == "Picture").Value;
 
+
             return result;
 
         }
@@ -94,6 +95,13 @@ namespace _0_Framework.Application
 
             var permissions = _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "permissions")?.Value;
             return JsonConvert.DeserializeObject<List<int>>(permissions);
+        }
+
+        public long CurrentAccountId()
+        {
+            return IsAuthenticated() ? long.Parse(_contextAccessor.HttpContext.User.Claims
+                .FirstOrDefault(x => x.Type == "AccountId").Value) : 0;
+
         }
     }
 }

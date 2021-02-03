@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5mWUv1cYoX+e1cfJyTCbLZyU720O8mbsNfmSRH8b/QfMzyg6dbu95oL9duLBbTO+VGzszGa6QU1sL9GQ7jDs1A==",
+  "dgSpecHash": "N7chN7emO5t686d5cqTnSbkTq/BOBZaYqxmPuEw/qWEuDW6JbKMPRByHPaB4Limn/c2l/+DBiw6QYWxCjPanGw==",
   "success": true,
   "projectFilePath": "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\AccountManagement.Configuration\\AccountManagement.Configuration.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\Diyar10\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\Diyar10\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

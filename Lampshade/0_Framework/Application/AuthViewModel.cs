@@ -13,6 +13,7 @@ namespace _0_Framework.Application
         public List<int> Permissions { get; set; }
         public string Picture { get; set; }
 
+
         public AuthViewModel()
         {
         }

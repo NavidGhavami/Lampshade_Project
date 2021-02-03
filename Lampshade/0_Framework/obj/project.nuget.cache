@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6KgCTsYo41wPC/AVPiXRUqfR+vnt4l2QbFnQdmDD0yrT0yTHzH9sulYS56etb27nb2Yj7tnOvrpieLwExeIeFA==",
+  "dgSpecHash": "oQB9/s5jskacRIuvJnem8JnqpcieSRO33aqccww+u7oihj/NQwPyBK6ocn7pxLbXoG8v7X8x8Sj9VoRxr6s4KQ==",
   "success": true,
   "projectFilePath": "F:\\Programming\\Codes and projects\\Lampshade\\Lampshade\\0_Framework\\0_Framework.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Diyar10\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\Diyar10\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Diyar10\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",

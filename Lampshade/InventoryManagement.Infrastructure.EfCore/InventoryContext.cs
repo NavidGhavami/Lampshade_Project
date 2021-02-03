@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace InventoryManagement.Infrastructure.EfCore
 {
-    public class InventoryContext :DbContext
+    public class InventoryContext : DbContext
     {
         public DbSet<Inventory> Inventories { get; set; }
         public InventoryContext(DbContextOptions<InventoryContext> options) : base(options)
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

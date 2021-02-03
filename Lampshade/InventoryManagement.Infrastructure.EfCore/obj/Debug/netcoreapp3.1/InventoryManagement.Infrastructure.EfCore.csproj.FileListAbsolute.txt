@@ -27,3 +27,9 @@ F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infras
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\CommentManagement.Domain.dll
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\CommentManagement.Application.Contract.pdb
 F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\CommentManagement.Domain.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contract.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\AccountManagement.Domain.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\AccountManagement.Infrastructure.EFCore.dll
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\AccountManagement.Infrastructure.EFCore.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\AccountManagement.Application.Contract.pdb
+F:\Programming\Codes and projects\Lampshade\Lampshade\InventoryManagement.Infrastructure.EfCore\bin\Debug\netcoreapp3.1\AccountManagement.Domain.pdb
